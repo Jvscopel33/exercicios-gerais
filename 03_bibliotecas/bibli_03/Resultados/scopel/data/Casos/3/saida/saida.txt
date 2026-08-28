@@ -1,2 +1,4 @@
-Primeira data: 24 deAgosto de 2023Segunda data: 29 deAgosto de 2023A primeira data eh mais antiga
+Primeira data: 24 de Agosto de 2023
+Segunda data: 29 de Agosto de 2023
+A primeira data eh mais antiga
 A diferenca em dias entre as datas eh: 05 dias

@@ -1,2 +1,4 @@
-Primeira data: 25 deDezembro de 2023Segunda data: 29 deAgosto de 2023A segunda data eh mais antiga
-A diferenca em dias entre as datas eh: 116 dias
+Primeira data: 25 de Dezembro de 2023
+Segunda data: 29 de Agosto de 2023
+A segunda data eh mais antiga
+A diferenca em dias entre as datas eh: 118 dias
