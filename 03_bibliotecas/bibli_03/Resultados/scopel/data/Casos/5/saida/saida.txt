@@ -1,0 +1,2 @@
+Primeira data: 15 deJulho de 2006Segunda data: 15 deJulho de 2006As datas sao iguais
+A diferenca em dias entre as datas eh: 00 dias

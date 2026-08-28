@@ -1,0 +1,2 @@
+Primeira data: 28 deJaneiro de 2002Segunda data: 20 deFevereiro de 2002A primeira data eh mais antiga
+A diferenca em dias entre as datas eh: 23 dias
