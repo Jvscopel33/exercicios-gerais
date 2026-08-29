@@ -1,1 +1,1 @@
-valgrind: Resultados/scopel/main/prog: No such file or directory
+A data informada eh invalida
