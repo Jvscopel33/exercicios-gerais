@@ -1,0 +1,34 @@
+# Arquivos objeto
+*.o
+
+# Executáveis
+scopel_exe
+*.exe
+a.out
+
+# Saídas de teste
+output_test/
+Resultados/
+
+# Arquivos gerados pelo script
+resultado.txt
+Resultado.csv
+saida.json
+log.txt
+
+# Valgrind e logs de compilação/linkagem
+result_valgrind.txt
+result_compilation.txt
+result_linking.txt
+
+# Arquivos temporários
+*.tmp
+*.swp
+*~
+
+# VS Code
+.vscode/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db

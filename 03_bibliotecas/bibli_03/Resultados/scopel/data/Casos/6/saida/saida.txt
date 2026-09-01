@@ -1,2 +1,4 @@
-Primeira data: 1 deJaneiro de 2000Segunda data: 31 deDezembro de 2023A primeira data eh mais antiga
-A diferenca em dias entre as datas eh: 8763 dias
+Primeira data: 01 de Janeiro de 2000
+Segunda data: 31 de Dezembro de 2023
+A primeira data eh mais antiga
+A diferenca em dias entre as datas eh: 8765 dias

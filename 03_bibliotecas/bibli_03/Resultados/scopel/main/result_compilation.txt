@@ -1,5 +1,0 @@
-main.c: In function ‘main’:
-main.c:15:42: warning: implicit declaration of function ‘verificaDataValid’; did you mean ‘verificaDataValida’? [-Wimplicit-function-declaration]
-   15 |     if(verificaDataValida(d1, m1, a1) && verificaDataValid (d2, m2, a2)){
-      |                                          ^~~~~~~~~~~~~~~~~
-      |                                          verificaDataValida

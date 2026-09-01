@@ -1,0 +1,15 @@
+==90490== Memcheck, a memory error detector
+==90490== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==90490== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==90490== Command: Resultados/scopel/main/prog Resultados/scopel/main/Casos/5
+==90490== Parent PID: 90489
+==90490== 
+==90490== 
+==90490== HEAP SUMMARY:
+==90490==     in use at exit: 0 bytes in 0 blocks
+==90490==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==90490== 
+==90490== All heap blocks were freed -- no leaks are possible
+==90490== 
+==90490== For lists of detected and suppressed errors, rerun with: -s
+==90490== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

@@ -1,3 +1,0 @@
-/usr/bin/ld: Resultados/scopel/main/main.o: in function `main':
-main.c:(.text+0xea): undefined reference to `verificaDataValid'
-collect2: error: ld returned 1 exit status
