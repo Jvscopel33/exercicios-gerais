@@ -1,0 +1,17 @@
+Arquivos Esperados Corretos: 3 de 3
+Pastas Compiladas Corretamente: 3 de 3 
+Pastas Linkadas Corretamente: 3 de 3
+Teste main
+  - Resultados corretos: 5 de 5
+  - Valgrinds corretos: 5 de 5
+Nota de scopel para o teste main: 
+Teste completo
+  - Resultados corretos: 5 de 5
+  - Valgrinds corretos: 5 de 5
+Nota de scopel para o teste completo: 
+Teste ponto
+  - Resultados corretos: 5 de 5
+  - Valgrinds corretos: 5 de 5
+Nota de scopel para o teste ponto: 
+Nota de scopel: 0+()+()+()
+Nota de scopel: 
