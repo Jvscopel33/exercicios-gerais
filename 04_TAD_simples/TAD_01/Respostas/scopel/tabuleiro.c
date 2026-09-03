@@ -91,13 +91,27 @@ int TemPosicaoLivreTabuleiro(tTabuleiro tabuleiro)
  */
 int EstaMarcadaPosicaoPecaTabuleiro(tTabuleiro tabuleiro, int x, int y, int peca)
 {
-    if (tabuleiro.posicoes[x][y] == tabuleiro.peca2 || tabuleiro.posicoes[x][y] == tabuleiro.peca1)
+    if (peca == 1)
     {
-        return 1;
+        if (tabuleiro.posicoes[x][y] == tabuleiro.peca1)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
-    else
+    else if (peca == 2)
     {
-        return 0;
+        if (tabuleiro.posicoes[x][y] == tabuleiro.peca2)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
     }
 }
 

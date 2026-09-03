@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "tabuleiro.h"
 #include "jogador.h"
+#include "jogada.h"
 
 #define ID_JOGADOR_1 1
 #define ID_JOGADOR_2 2
@@ -34,6 +35,21 @@ tJogador CriaJogador(int idJogador)
  */
 tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
 {
+    tJogada jogada;
+    printf("Jogador %d\n");
+    printf("Digite uma posicao (x e y):\n");
+    jogada = LeJogada();
+    if (!EhPosicaoValidaTabuleiro(ObtemJogadaX(jogada), ObtemJogadaY(jogada)))
+    {
+        printf("Posicao invalida (OCUPADA - [%d,%d] )!", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+    }
+    if (!EstaLivrePosicaoTabuleiro(tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada)))
+    {
+        printf("Posicao invalida (OCUPADA - [%d,%d] )!", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+    }
+    printf("Jogada [%d,%d]!", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+    tabuleiro = MarcaPosicaoTabuleiro(tabuleiro, jogador.id, ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+    return tabuleiro;
 }
 
 /**
@@ -46,6 +62,27 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
  */
 int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro)
 {
+    int win = 0;
+    for (int i = 0; i < TAM_TABULEIRO; i++)
+    {
+        win = 0;
+        for (int j = 0; j < TAM_TABULEIRO; j++)
+        {
+            if (jogador.id == 1)
+            {
+                if (tabuleiro.posicoes[i][j] == tabuleiro.peca1)
+                {
+                    win++;
+                    if (win == 3)
+                    {
+                        return 1
+                    }
+                    continue;
+                }
+                else
+                {
+                }
+            }
+        }
+    }
 }
-
-#endif
