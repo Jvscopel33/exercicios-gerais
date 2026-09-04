@@ -1,0 +1,42 @@
+jogador.c:12:3: error: conflicting types for ‘tJogador’; have ‘struct <anonymous>’
+   12 | } tJogador;
+      |   ^~~~~~~~
+In file included from jogador.c:3:
+jogador.h:13:3: note: previous declaration of ‘tJogador’ with type ‘tJogador’
+   13 | } tJogador;
+      |   ^~~~~~~~
+jogador.c:21:10: error: conflicting types for ‘CriaJogador’; have ‘tJogador(int)’
+   21 | tJogador CriaJogador(int idJogador)
+      |          ^~~~~~~~~~~
+jogador.h:22:10: note: previous declaration of ‘CriaJogador’ with type ‘tJogador(int)’
+   22 | tJogador CriaJogador(int idJogador);
+      |          ^~~~~~~~~~~
+jogador.c:36:12: error: conflicting types for ‘JogaJogador’; have ‘tTabuleiro(tJogador,  tTabuleiro)’
+   36 | tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
+      |            ^~~~~~~~~~~
+jogador.h:33:12: note: previous declaration of ‘JogaJogador’ with type ‘tTabuleiro(tJogador,  tTabuleiro)’
+   33 | tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro);
+      |            ^~~~~~~~~~~
+jogador.c: In function ‘JogaJogador’:
+jogador.c:39:22: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+   39 |     printf("Jogador %d\n");
+      |                     ~^
+      |                      |
+      |                      int
+jogador.c: At top level:
+jogador.c:63:5: error: conflicting types for ‘VenceuJogador’; have ‘int(tJogador,  tTabuleiro)’
+   63 | int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro)
+      |     ^~~~~~~~~~~~~
+jogador.h:44:5: note: previous declaration of ‘VenceuJogador’ with type ‘int(tJogador,  tTabuleiro)’
+   44 | int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro);
+      |     ^~~~~~~~~~~~~
+jogador.c: In function ‘VenceuJogador’:
+jogador.c:78:33: error: expected ‘;’ before ‘}’ token
+   78 |                         return 1
+      |                                 ^
+      |                                 ;
+   79 |                     }
+      |                     ~            
+jogador.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+   88 | }
+      | ^

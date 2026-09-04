@@ -1,0 +1,8 @@
+Nome: 
+CPF: 
+Data de Nascimento: 0/0/0
+Residência: 
+Nome: 
+Id: 
+Capacidade: 0 convidado(s)
+Quantidade de convidados: 0

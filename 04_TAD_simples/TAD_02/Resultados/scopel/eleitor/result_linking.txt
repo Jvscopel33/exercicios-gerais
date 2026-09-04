@@ -1,0 +1,6 @@
+/usr/bin/ld: Resultados/scopel/eleitor/eleicao.o: in function `RealizaEleicao':
+eleicao.c:(.text+0x40a): undefined reference to `LeEleitor'
+/usr/bin/ld: eleicao.c:(.text+0x4ec): undefined reference to `EhMesmoEleitor'
+/usr/bin/ld: eleicao.c:(.text+0x56f): undefined reference to `ObtemVotoPresidente'
+/usr/bin/ld: eleicao.c:(.text+0x779): undefined reference to `ObtemVotoGovernador'
+collect2: error: ld returned 1 exit status

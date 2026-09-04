@@ -18,7 +18,6 @@ tJogada LeJogada()
     tJogada jogada;
     scanf("%d", &jogada.x);
     scanf("%d", &jogada.y);
-    scanf("%d", &jogada.sucesso);
     return jogada;
 }
 

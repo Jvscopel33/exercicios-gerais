@@ -62,20 +62,20 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
  */
 int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro)
 {
-    int win = 0;
+    int winl = 0;
     for (int i = 0; i < TAM_TABULEIRO; i++)
     {
-        win = 0;
+        winl = 0;
         for (int j = 0; j < TAM_TABULEIRO; j++)
         {
             if (jogador.id == 1)
             {
-                if (tabuleiro.posicoes[i][j] == tabuleiro.peca1)
+                if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, i,j,jogador.id))
                 {
-                    win++;
-                    if (win == 3)
+                    winl++;
+                    if (winl == 3)
                     {
-                        return 1
+                        return 1;
                     }
                     continue;
                 }

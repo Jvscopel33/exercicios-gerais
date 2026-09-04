@@ -1,0 +1,31 @@
+jogada.c:9:3: error: conflicting types for ‘tJogada’; have ‘struct <anonymous>’
+    9 | } tJogada;
+      |   ^~~~~~~
+In file included from jogada.c:2:
+jogada.h:9:3: note: previous declaration of ‘tJogada’ with type ‘tJogada’
+    9 | } tJogada;
+      |   ^~~~~~~
+jogada.c:16:9: error: conflicting types for ‘LeJogada’; have ‘tJogada()’
+   16 | tJogada LeJogada()
+      |         ^~~~~~~~
+jogada.h:16:9: note: previous declaration of ‘LeJogada’ with type ‘tJogada()’
+   16 | tJogada LeJogada();
+      |         ^~~~~~~~
+jogada.c:32:5: error: conflicting types for ‘ObtemJogadaX’; have ‘int(tJogada)’
+   32 | int ObtemJogadaX(tJogada jogada)
+      |     ^~~~~~~~~~~~
+jogada.h:26:5: note: previous declaration of ‘ObtemJogadaX’ with type ‘int(tJogada)’
+   26 | int ObtemJogadaX(tJogada jogada);
+      |     ^~~~~~~~~~~~
+jogada.c:44:5: error: conflicting types for ‘ObtemJogadaY’; have ‘int(tJogada)’
+   44 | int ObtemJogadaY(tJogada jogada)
+      |     ^~~~~~~~~~~~
+jogada.h:36:5: note: previous declaration of ‘ObtemJogadaY’ with type ‘int(tJogada)’
+   36 | int ObtemJogadaY(tJogada jogada);
+      |     ^~~~~~~~~~~~
+jogada.c:56:5: error: conflicting types for ‘FoiJogadaBemSucedida’; have ‘int(tJogada)’
+   56 | int FoiJogadaBemSucedida(tJogada jogada)
+      |     ^~~~~~~~~~~~~~~~~~~~
+jogada.h:46:5: note: previous declaration of ‘FoiJogadaBemSucedida’ with type ‘int(tJogada)’
+   46 | int FoiJogadaBemSucedida(tJogada jogada);
+      |     ^~~~~~~~~~~~~~~~~~~~

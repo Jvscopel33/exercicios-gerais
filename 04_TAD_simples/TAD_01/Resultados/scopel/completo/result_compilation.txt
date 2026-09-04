@@ -1,0 +1,102 @@
+jogada.c:9:3: error: conflicting types for ‘tJogada’; have ‘struct <anonymous>’
+    9 | } tJogada;
+      |   ^~~~~~~
+In file included from jogada.c:2:
+jogada.h:9:3: note: previous declaration of ‘tJogada’ with type ‘tJogada’
+    9 | } tJogada;
+      |   ^~~~~~~
+jogada.c:16:9: error: conflicting types for ‘LeJogada’; have ‘tJogada()’
+   16 | tJogada LeJogada()
+      |         ^~~~~~~~
+jogada.h:16:9: note: previous declaration of ‘LeJogada’ with type ‘tJogada()’
+   16 | tJogada LeJogada();
+      |         ^~~~~~~~
+jogada.c:32:5: error: conflicting types for ‘ObtemJogadaX’; have ‘int(tJogada)’
+   32 | int ObtemJogadaX(tJogada jogada)
+      |     ^~~~~~~~~~~~
+jogada.h:26:5: note: previous declaration of ‘ObtemJogadaX’ with type ‘int(tJogada)’
+   26 | int ObtemJogadaX(tJogada jogada);
+      |     ^~~~~~~~~~~~
+jogada.c:44:5: error: conflicting types for ‘ObtemJogadaY’; have ‘int(tJogada)’
+   44 | int ObtemJogadaY(tJogada jogada)
+      |     ^~~~~~~~~~~~
+jogada.h:36:5: note: previous declaration of ‘ObtemJogadaY’ with type ‘int(tJogada)’
+   36 | int ObtemJogadaY(tJogada jogada);
+      |     ^~~~~~~~~~~~
+jogada.c:56:5: error: conflicting types for ‘FoiJogadaBemSucedida’; have ‘int(tJogada)’
+   56 | int FoiJogadaBemSucedida(tJogada jogada)
+      |     ^~~~~~~~~~~~~~~~~~~~
+jogada.h:46:5: note: previous declaration of ‘FoiJogadaBemSucedida’ with type ‘int(tJogada)’
+   46 | int FoiJogadaBemSucedida(tJogada jogada);
+      |     ^~~~~~~~~~~~~~~~~~~~
+jogador.c:12:3: error: conflicting types for ‘tJogador’; have ‘struct <anonymous>’
+   12 | } tJogador;
+      |   ^~~~~~~~
+In file included from jogador.c:3:
+jogador.h:13:3: note: previous declaration of ‘tJogador’ with type ‘tJogador’
+   13 | } tJogador;
+      |   ^~~~~~~~
+jogador.c:21:10: error: conflicting types for ‘CriaJogador’; have ‘tJogador(int)’
+   21 | tJogador CriaJogador(int idJogador)
+      |          ^~~~~~~~~~~
+jogador.h:22:10: note: previous declaration of ‘CriaJogador’ with type ‘tJogador(int)’
+   22 | tJogador CriaJogador(int idJogador);
+      |          ^~~~~~~~~~~
+jogador.c:36:12: error: conflicting types for ‘JogaJogador’; have ‘tTabuleiro(tJogador,  tTabuleiro)’
+   36 | tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
+      |            ^~~~~~~~~~~
+jogador.h:33:12: note: previous declaration of ‘JogaJogador’ with type ‘tTabuleiro(tJogador,  tTabuleiro)’
+   33 | tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro);
+      |            ^~~~~~~~~~~
+jogador.c: In function ‘JogaJogador’:
+jogador.c:39:22: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+   39 |     printf("Jogador %d\n");
+      |                     ~^
+      |                      |
+      |                      int
+jogador.c: At top level:
+jogador.c:63:5: error: conflicting types for ‘VenceuJogador’; have ‘int(tJogador,  tTabuleiro)’
+   63 | int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro)
+      |     ^~~~~~~~~~~~~
+jogador.h:44:5: note: previous declaration of ‘VenceuJogador’ with type ‘int(tJogador,  tTabuleiro)’
+   44 | int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro);
+      |     ^~~~~~~~~~~~~
+jogador.c: In function ‘VenceuJogador’:
+jogador.c:78:33: error: expected ‘;’ before ‘}’ token
+   78 |                         return 1
+      |                                 ^
+      |                                 ;
+   79 |                     }
+      |                     ~            
+jogador.c:88:1: warning: control reaches end of non-void function [-Wreturn-type]
+   88 | }
+      | ^
+jogo.c:12:3: error: conflicting types for ‘tJogo’; have ‘struct <anonymous>’
+   12 | } tJogo;
+      |   ^~~~~
+In file included from jogo.c:2:
+jogo.h:12:3: note: previous declaration of ‘tJogo’ with type ‘tJogo’
+   12 | } tJogo;
+      |   ^~~~~
+jogo.c:19:7: error: conflicting types for ‘CriaJogo’; have ‘tJogo()’
+   19 | tJogo CriaJogo()
+      |       ^~~~~~~~
+jogo.h:19:7: note: previous declaration of ‘CriaJogo’ with type ‘tJogo()’
+   19 | tJogo CriaJogo();
+      |       ^~~~~~~~
+jogo.c:30:6: error: conflicting types for ‘ComecaJogo’; have ‘void(tJogo)’
+   30 | void ComecaJogo(tJogo jogo)
+      |      ^~~~~~~~~~
+jogo.h:27:6: note: previous declaration of ‘ComecaJogo’ with type ‘void(tJogo)’
+   27 | void ComecaJogo(tJogo jogo);
+      |      ^~~~~~~~~~
+jogo.c:44:5: error: conflicting types for ‘AcabouJogo’; have ‘int(tJogo)’
+   44 | int AcabouJogo(tJogo jogo)
+      |     ^~~~~~~~~~
+jogo.h:37:5: note: previous declaration of ‘AcabouJogo’ with type ‘int(tJogo)’
+   37 | int AcabouJogo(tJogo jogo);
+      |     ^~~~~~~~~~
+tabuleiro.c: In function ‘EstaMarcadaPosicaoPecaTabuleiro’:
+tabuleiro.c:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+  108 | }
+      | ^
