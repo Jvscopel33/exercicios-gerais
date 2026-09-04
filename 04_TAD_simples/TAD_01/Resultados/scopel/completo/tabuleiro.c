@@ -40,11 +40,11 @@ tTabuleiro MarcaPosicaoTabuleiro(tTabuleiro tabuleiro, int peca, int x, int y)
 {
     if (peca == 1)
     {
-        tabuleiro.posicoes[x][y] = tabuleiro.peca1;
+        tabuleiro.posicoes[y][x] = tabuleiro.peca1;
     }
     else
     {
-        tabuleiro.posicoes[x][y] = tabuleiro.peca2;
+        tabuleiro.posicoes[y][x] = tabuleiro.peca2;
     }
     return tabuleiro;
 }
@@ -85,7 +85,7 @@ int EstaMarcadaPosicaoPecaTabuleiro(tTabuleiro tabuleiro, int x, int y, int peca
 {
     if (peca == 1)
     {
-        if (tabuleiro.posicoes[x][y] == tabuleiro.peca1)
+        if (tabuleiro.posicoes[y][x] == tabuleiro.peca1)
         {
             return 1;
         }
@@ -94,17 +94,14 @@ int EstaMarcadaPosicaoPecaTabuleiro(tTabuleiro tabuleiro, int x, int y, int peca
             return 0;
         }
     }
-    else if (peca == 2)
+    else
     {
-        if (tabuleiro.posicoes[x][y] == tabuleiro.peca2)
+        if (tabuleiro.posicoes[y][x] == tabuleiro.peca2)
         {
             return 1;
         }
-        else
-        {
-            return 0;
-        }
     }
+    return 0;
 }
 
 /**
@@ -118,14 +115,11 @@ int EstaMarcadaPosicaoPecaTabuleiro(tTabuleiro tabuleiro, int x, int y, int peca
  */
 int EstaLivrePosicaoTabuleiro(tTabuleiro tabuleiro, int x, int y)
 {
-    if (tabuleiro.posicoes[x][y] == tabuleiro.pecaVazio)
+    if (tabuleiro.posicoes[y][x] == tabuleiro.pecaVazio)
     {
         return 1;
     }
-    else
-    {
-        return 0;
-    }
+    return 0;
 }
 
 /**
@@ -137,7 +131,7 @@ int EstaLivrePosicaoTabuleiro(tTabuleiro tabuleiro, int x, int y)
  */
 int EhPosicaoValidaTabuleiro(int x, int y)
 {
-    if (x > 3 || y > 3)
+    if (y > TAM_TABULEIRO - 1 || x > TAM_TABULEIRO - 1 || y < 0 || x < 0)
     {
         return 0;
     }
@@ -161,5 +155,6 @@ void ImprimeTabuleiro(tTabuleiro tabuleiro)
             printf("%c", tabuleiro.posicoes[i][j]);
         }
         printf("\n");
+        printf("\t");
     }
 }

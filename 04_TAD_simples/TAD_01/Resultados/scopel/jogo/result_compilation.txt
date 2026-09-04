@@ -1,25 +1,7 @@
-jogo.c:12:3: error: conflicting types for ‘tJogo’; have ‘struct <anonymous>’
-   12 | } tJogo;
-      |   ^~~~~
-In file included from jogo.c:2:
-jogo.h:12:3: note: previous declaration of ‘tJogo’ with type ‘tJogo’
-   12 | } tJogo;
-      |   ^~~~~
-jogo.c:19:7: error: conflicting types for ‘CriaJogo’; have ‘tJogo()’
-   19 | tJogo CriaJogo()
-      |       ^~~~~~~~
-jogo.h:19:7: note: previous declaration of ‘CriaJogo’ with type ‘tJogo()’
-   19 | tJogo CriaJogo();
-      |       ^~~~~~~~
-jogo.c:30:6: error: conflicting types for ‘ComecaJogo’; have ‘void(tJogo)’
-   30 | void ComecaJogo(tJogo jogo)
-      |      ^~~~~~~~~~
-jogo.h:27:6: note: previous declaration of ‘ComecaJogo’ with type ‘void(tJogo)’
-   27 | void ComecaJogo(tJogo jogo);
-      |      ^~~~~~~~~~
-jogo.c:44:5: error: conflicting types for ‘AcabouJogo’; have ‘int(tJogo)’
-   44 | int AcabouJogo(tJogo jogo)
-      |     ^~~~~~~~~~
-jogo.h:37:5: note: previous declaration of ‘AcabouJogo’ with type ‘int(tJogo)’
-   37 | int AcabouJogo(tJogo jogo);
-      |     ^~~~~~~~~~
+jogo.c: In function ‘CriaJogo’:
+jogo.c:22:12: warning: ‘jogo’ is used uninitialized [-Wuninitialized]
+   22 |     return jogo;
+      |            ^~~~
+jogo.c:21:11: note: ‘jogo’ declared here
+   21 |     tJogo jogo;
+      |           ^~~~

@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include "jogada.h"
 
-typedef struct
-{
-    int x;
-    int y;
-    int sucesso;
-} tJogada;
+// typedef struct
+// {
+//     int x;
+//     int y;
+//     int sucesso;
+// } tJogada;
 
 /**
  * Lê uma jogada e retorna uma estrutura do tipo tJogada e define o valor da variavel sucesso.
@@ -16,9 +16,15 @@ typedef struct
 tJogada LeJogada()
 {
     tJogada jogada;
-    scanf("%d", &jogada.x);
-    scanf("%d", &jogada.y);
-    scanf("%d", &jogada.sucesso);
+    printf("Digite uma posicao (x e y):\n");
+    if (scanf("%d %d\n", &jogada.x, &jogada.y) == 2)
+    {
+        jogada.sucesso = 1;
+    }
+    else
+    {
+        jogada.sucesso = 0;
+    }
     return jogada;
 }
 
@@ -55,12 +61,5 @@ int ObtemJogadaY(tJogada jogada)
  */
 int FoiJogadaBemSucedida(tJogada jogada)
 {
-    if (jogada.sucesso)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    return jogada.sucesso;
 }

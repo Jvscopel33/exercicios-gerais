@@ -2,14 +2,14 @@
 #include "jogo.h"
 #include "jogador.h"
 #include "tabuleiro.h"
+#include "jogada.h"
+// typedef struct
+// {
+//     tTabuleiro tabuleiro;
+//     tJogador jogador1;
+//     tJogador jogador2;
 
-typedef struct
-{
-    tTabuleiro tabuleiro;
-    tJogador jogador1;
-    tJogador jogador2;
-
-} tJogo;
+// } tJogo;
 
 /**
  * Cria um jogo e retorna o jogo criado.
@@ -19,6 +19,9 @@ typedef struct
 tJogo CriaJogo()
 {
     tJogo jogo;
+    jogo.tabuleiro = CriaTabuleiro();
+    jogo.jogador1 = CriaJogador(1);
+    jogo.jogador2 = CriaJogador(2);
     return jogo;
 }
 
@@ -29,9 +32,14 @@ tJogo CriaJogo()
  */
 void ComecaJogo(tJogo jogo)
 {
-    jogo.tabuleiro = CriaTabuleiro();
-    jogo.jogador1 = CriaJogador(1);
-    jogo.jogador2 = CriaJogador(2);
+    tJogada jogada;
+    while (!AcabouJogo(jogo) && ContinuaJogo())
+    {
+        jogada = LeJogada();
+        if (FoiJogadaBemSucedida(jogada) && (ObtemJogadaX(jogada), ObtemJogadaY(jogada) && EstaLivrePosicaoTabuleiro(jogo.tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada))))
+        {
+        }
+    }
 }
 
 /**
@@ -61,7 +69,7 @@ int AcabouJogo(tJogo jogo)
 int ContinuaJogo()
 {
     char cmd;
-    scanf("%c", &cmd);
+    scanf(" %c", &cmd);
     if (cmd == 's')
     {
         return 1;

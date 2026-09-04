@@ -3,13 +3,13 @@
 #include "jogador.h"
 #include "tabuleiro.h"
 
-typedef struct
-{
-    tTabuleiro tabuleiro;
-    tJogador jogador1;
-    tJogador jogador2;
+// typedef struct
+// {
+//     tTabuleiro tabuleiro;
+//     tJogador jogador1;
+//     tJogador jogador2;
 
-} tJogo;
+// } tJogo;
 
 /**
  * Cria um jogo e retorna o jogo criado.
@@ -61,7 +61,7 @@ int AcabouJogo(tJogo jogo)
 int ContinuaJogo()
 {
     char cmd;
-    scanf("%c", &cmd);
+    scanf(" %c", &cmd);
     if (cmd == 's')
     {
         return 1;

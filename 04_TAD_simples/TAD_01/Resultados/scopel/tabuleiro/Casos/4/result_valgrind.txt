@@ -1,22 +1,15 @@
-==74730== Memcheck, a memory error detector
-==74730== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==74730== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==74730== Command: Resultados/scopel/tabuleiro/prog Resultados/scopel/tabuleiro/Casos/4
-==74730== Parent PID: 74729
-==74730== 
-==74730== Conditional jump or move depends on uninitialised value(s)
-==74730==    at 0x109EEB: EstaLivrePosicaoTabuleiro (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_01/Resultados/scopel/tabuleiro/prog)
-==74730==    by 0x1093CD: JogaJogador (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_01/Resultados/scopel/tabuleiro/prog)
-==74730==    by 0x1099A5: ComecaJogo (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_01/Resultados/scopel/tabuleiro/prog)
-==74730==    by 0x109C25: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_01/Resultados/scopel/tabuleiro/prog)
-==74730== 
-==74730== 
-==74730== HEAP SUMMARY:
-==74730==     in use at exit: 0 bytes in 0 blocks
-==74730==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
-==74730== 
-==74730== All heap blocks were freed -- no leaks are possible
-==74730== 
-==74730== Use --track-origins=yes to see where uninitialised values come from
-==74730== For lists of detected and suppressed errors, rerun with: -s
-==74730== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==59198== Memcheck, a memory error detector
+==59198== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==59198== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==59198== Command: Resultados/scopel/tabuleiro/prog Resultados/scopel/tabuleiro/Casos/4
+==59198== Parent PID: 59197
+==59198== 
+==59198== 
+==59198== HEAP SUMMARY:
+==59198==     in use at exit: 0 bytes in 0 blocks
+==59198==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==59198== 
+==59198== All heap blocks were freed -- no leaks are possible
+==59198== 
+==59198== For lists of detected and suppressed errors, rerun with: -s
+==59198== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

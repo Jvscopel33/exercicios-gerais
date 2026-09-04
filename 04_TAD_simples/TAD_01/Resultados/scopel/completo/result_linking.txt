@@ -1,3 +1,6 @@
-/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
 (.text+0x1b): undefined reference to `main'
+/usr/bin/ld: Resultados/scopel/completo/jogo.o: in function `ComecaJogo':
+jogo.c:(.text+0x79): undefined reference to `CriaJogador'
+/usr/bin/ld: jogo.c:(.text+0x86): undefined reference to `CriaJogador'
 collect2: error: ld returned 1 exit status
