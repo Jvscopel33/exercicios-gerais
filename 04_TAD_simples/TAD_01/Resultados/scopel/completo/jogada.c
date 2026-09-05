@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "jogada.h"
+#include "tabuleiro.h"
 
 // typedef struct
 // {
@@ -61,5 +62,9 @@ int ObtemJogadaY(tJogada jogada)
  */
 int FoiJogadaBemSucedida(tJogada jogada)
 {
-    return jogada.sucesso;
+    if (jogada.sucesso)
+    {
+        return 1;
+    }
+    return 0;
 }

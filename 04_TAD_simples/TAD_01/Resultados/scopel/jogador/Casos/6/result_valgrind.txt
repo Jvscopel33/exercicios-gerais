@@ -1,0 +1,15 @@
+==182509== Memcheck, a memory error detector
+==182509== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==182509== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==182509== Command: Resultados/scopel/jogador/prog Resultados/scopel/jogador/Casos/6
+==182509== Parent PID: 182508
+==182509== 
+==182509== 
+==182509== HEAP SUMMARY:
+==182509==     in use at exit: 0 bytes in 0 blocks
+==182509==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==182509== 
+==182509== All heap blocks were freed -- no leaks are possible
+==182509== 
+==182509== For lists of detected and suppressed errors, rerun with: -s
+==182509== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

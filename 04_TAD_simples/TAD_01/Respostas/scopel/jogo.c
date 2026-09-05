@@ -3,13 +3,6 @@
 #include "jogador.h"
 #include "tabuleiro.h"
 #include "jogada.h"
-// typedef struct
-// {
-//     tTabuleiro tabuleiro;
-//     tJogador jogador1;
-//     tJogador jogador2;
-
-// } tJogo;
 
 /**
  * Cria um jogo e retorna o jogo criado.
@@ -20,8 +13,8 @@ tJogo CriaJogo()
 {
     tJogo jogo;
     jogo.tabuleiro = CriaTabuleiro();
-    jogo.jogador1 = CriaJogador(1);
-    jogo.jogador2 = CriaJogador(2);
+    jogo.jogador1 = CriaJogador(ID_JOGADOR_1);
+    jogo.jogador2 = CriaJogador(ID_JOGADOR_2);
     return jogo;
 }
 
@@ -32,14 +25,30 @@ tJogo CriaJogo()
  */
 void ComecaJogo(tJogo jogo)
 {
-    tJogada jogada;
-    while (!AcabouJogo(jogo) && ContinuaJogo())
+
+    while (!AcabouJogo(jogo))
     {
-        jogada = LeJogada();
-        if (FoiJogadaBemSucedida(jogada) && (ObtemJogadaX(jogada), ObtemJogadaY(jogada) && EstaLivrePosicaoTabuleiro(jogo.tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada))))
+        jogo.tabuleiro = JogaJogador(jogo.jogador1, jogo.tabuleiro);
+        ImprimeTabuleiro(jogo.tabuleiro);
+        if (VenceuJogador(jogo.jogador1, jogo.tabuleiro))
         {
+            printf("JOGADOR 1 Venceu!\n");
+            return;
+        }
+        if (AcabouJogo(jogo))
+        {
+            break;
+        }
+        jogo.tabuleiro = JogaJogador(jogo.jogador2, jogo.tabuleiro);
+        ImprimeTabuleiro(jogo.tabuleiro);
+        if (VenceuJogador(jogo.jogador2, jogo.tabuleiro))
+        {
+            printf("JOGADOR 2 Venceu!\n");
+            return;
         }
     }
+    printf("Sem vencedor!\n");
+    return;
 }
 
 /**
@@ -51,7 +60,7 @@ void ComecaJogo(tJogo jogo)
  */
 int AcabouJogo(tJogo jogo)
 {
-    if (!TemPosicaoLivreTabuleiro(jogo.tabuleiro))
+    if (TemPosicaoLivreTabuleiro(jogo.tabuleiro))
     {
         return 0;
     }
@@ -69,13 +78,15 @@ int AcabouJogo(tJogo jogo)
 int ContinuaJogo()
 {
     char cmd;
-    scanf(" %c", &cmd);
+    printf("Jogar novamente? (s,n)\n");
+    scanf(" %c\n", &cmd);
+    while (cmd != 's' && cmd != 'n')
+    {
+        scanf(" %c\n", &cmd);
+    }
     if (cmd == 's')
     {
         return 1;
     }
-    else
-    {
-        return 0;
-    }
+    return 0;
 }

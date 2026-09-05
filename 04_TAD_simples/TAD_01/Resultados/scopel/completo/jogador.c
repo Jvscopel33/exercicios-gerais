@@ -3,13 +3,13 @@
 #include "jogador.h"
 #include "jogada.h"
 
-#define ID_JOGADOR_1 1
-#define ID_JOGADOR_2 2
+// #define ID_JOGADOR_1 1
+// #define ID_JOGADOR_2 2
 
-typedef struct
-{
-    int id;
-} tJogador;
+// typedef struct
+// {
+//     int id;
+// } tJogador;
 
 /**
  * Cria um jogador com o id passado como parâmetro e retorna o jogador criado.
@@ -36,20 +36,25 @@ tJogador CriaJogador(int idJogador)
 tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
 {
     tJogada jogada;
-    printf("Jogador %d\n");
-    printf("Digite uma posicao (x e y):\n");
-    jogada = LeJogada();
-    if (!EhPosicaoValidaTabuleiro(ObtemJogadaX(jogada), ObtemJogadaY(jogada)))
+    while (1)
     {
-        printf("Posicao invalida (OCUPADA - [%d,%d] )!", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+        printf("Jogador %d\n", jogador.id);
+        jogada = LeJogada();
+        if (!EhPosicaoValidaTabuleiro(ObtemJogadaX(jogada), ObtemJogadaY(jogada)))
+        {
+            printf("Posicao invalida (FORA DO TABULEIRO - [%d,%d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+            continue;
+        }
+        if (!EstaLivrePosicaoTabuleiro(tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada)))
+        {
+            printf("Posicao invalida (OCUPADA - [%d,%d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+            continue;
+        }
+
+        tabuleiro = MarcaPosicaoTabuleiro(tabuleiro, jogador.id, ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+        printf("Jogada [%d,%d]!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
+        return tabuleiro;
     }
-    if (!EstaLivrePosicaoTabuleiro(tabuleiro, ObtemJogadaX(jogada), ObtemJogadaY(jogada)))
-    {
-        printf("Posicao invalida (OCUPADA - [%d,%d] )!", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
-    }
-    printf("Jogada [%d,%d]!", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
-    tabuleiro = MarcaPosicaoTabuleiro(tabuleiro, jogador.id, ObtemJogadaX(jogada), ObtemJogadaY(jogada));
-    return tabuleiro;
 }
 
 /**
@@ -62,27 +67,37 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
  */
 int VenceuJogador(tJogador jogador, tTabuleiro tabuleiro)
 {
-    int winl = 0;
-    for (int i = 0; i < TAM_TABULEIRO; i++)
+    if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 0, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 1, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 2, jogador.id))
     {
-        winl = 0;
-        for (int j = 0; j < TAM_TABULEIRO; j++)
-        {
-            if (jogador.id == 1)
-            {
-                if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, i,j,jogador.id))
-                {
-                    winl++;
-                    if (winl == 3)
-                    {
-                        return 1;
-                    }
-                    continue;
-                }
-                else
-                {
-                }
-            }
-        }
+        return 1;
     }
+    else if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 0, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 1, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 2, jogador.id))
+    {
+        return 1;
+    }
+    else if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 0, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 1, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 2, jogador.id))
+    {
+        return 1;
+    }
+    else if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 0, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 1, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 2, jogador.id))
+    {
+        return 1;
+    }
+    else if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 2, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 1, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 0, jogador.id))
+    {
+        return 1;
+    }
+    else if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 0, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 0, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 0, jogador.id))
+    {
+        return 1;
+    }
+    else if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 1, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 1, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 1, jogador.id))
+    {
+        return 1;
+    }
+    else if (EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 0, 2, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 1, 2, jogador.id) && EstaMarcadaPosicaoPecaTabuleiro(tabuleiro, 2, 2, jogador.id))
+    {
+        return 1;
+    }
+    return 0;
 }
