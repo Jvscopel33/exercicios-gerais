@@ -1,0 +1,86 @@
+==87091== Memcheck, a memory error detector
+==87091== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==87091== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==87091== Command: Resultados/scopel/locadora/prog Resultados/scopel/locadora/Casos/11
+==87091== Parent PID: 87090
+==87091== 
+==87091== Conditional jump or move depends on uninitialised value(s)
+==87091==    at 0x109A80: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Use of uninitialised value of size 8
+==87091==    at 0x10991B: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Use of uninitialised value of size 8
+==87091==    at 0x109943: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Conditional jump or move depends on uninitialised value(s)
+==87091==    at 0x109974: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Use of uninitialised value of size 8
+==87091==    at 0x1099C0: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Use of uninitialised value of size 8
+==87091==    at 0x1099F8: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Use of uninitialised value of size 8
+==87091==    at 0x109A3B: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Conditional jump or move depends on uninitialised value(s)
+==87091==    at 0x109D7C: devolverFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x109EBC: lerDevolucaoLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A46F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Conditional jump or move depends on uninitialised value(s)
+==87091==    at 0x48C90CB: __printf_buffer (vfprintf-process-arg.c:58)
+==87091==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==87091==    by 0x48BF1B2: printf (printf.c:33)
+==87091==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Use of uninitialised value of size 8
+==87091==    at 0x48BE0BB: _itoa_word (_itoa.c:183)
+==87091==    by 0x48C8C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==87091==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==87091==    by 0x48BF1B2: printf (printf.c:33)
+==87091==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Conditional jump or move depends on uninitialised value(s)
+==87091==    at 0x48BE0CC: _itoa_word (_itoa.c:183)
+==87091==    by 0x48C8C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==87091==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==87091==    by 0x48BF1B2: printf (printf.c:33)
+==87091==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== Conditional jump or move depends on uninitialised value(s)
+==87091==    at 0x48C8D85: __printf_buffer (vfprintf-process-arg.c:186)
+==87091==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==87091==    by 0x48BF1B2: printf (printf.c:33)
+==87091==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==87091== 
+==87091== 
+==87091== HEAP SUMMARY:
+==87091==     in use at exit: 0 bytes in 0 blocks
+==87091==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==87091== 
+==87091== All heap blocks were freed -- no leaks are possible
+==87091== 
+==87091== Use --track-origins=yes to see where uninitialised values come from
+==87091== For lists of detected and suppressed errors, rerun with: -s
+==87091== ERROR SUMMARY: 25 errors from 12 contexts (suppressed: 0 from 0)
