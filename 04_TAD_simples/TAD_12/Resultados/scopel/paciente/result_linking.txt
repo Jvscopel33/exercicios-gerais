@@ -1,0 +1,11 @@
+/usr/bin/ld: Resultados/scopel/paciente/main.o: in function `insereLesoesPacientes':
+main.c:(.text+0x1e1): undefined reference to `getCartaoSusPaciente'
+/usr/bin/ld: main.c:(.text+0x3bf): undefined reference to `vinculaLesaoPaciente'
+/usr/bin/ld: Resultados/scopel/paciente/main.o: in function `criaRelatorio':
+main.c:(.text+0x4f1): undefined reference to `calculaIdadePaciente'
+/usr/bin/ld: main.c:(.text+0x547): undefined reference to `getNumLesoesPaciente'
+/usr/bin/ld: main.c:(.text+0x597): undefined reference to `qtdLesoesCirurgicasPaciente'
+/usr/bin/ld: main.c:(.text+0x67c): undefined reference to `imprimePaciente'
+/usr/bin/ld: Resultados/scopel/paciente/main.o: in function `main':
+main.c:(.text+0x713): undefined reference to `lerPaciente'
+collect2: error: ld returned 1 exit status

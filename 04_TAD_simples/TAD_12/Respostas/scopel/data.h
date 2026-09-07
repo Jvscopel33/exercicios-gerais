@@ -18,7 +18,6 @@ Função que cria uma data a partir do dia, mês e ano fornecidos e retorna a da
 @return Data criada.
 */
 Data criaData(int dia, int mes, int ano);
-
 /*
 Função que lê uma data do formato DD/MM/AAAA a partir da entrada padrão e retorna a data lida.
 @return Data lida.
