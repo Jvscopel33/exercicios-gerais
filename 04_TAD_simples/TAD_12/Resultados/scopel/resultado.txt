@@ -1,14 +1,14 @@
-Arquivos Esperados Corretos: 4 de 7
-Pastas Compiladas Corretamente: 2 de 4 
-Pastas Linkadas Corretamente: 2 de 4
+Arquivos Esperados Corretos: 7 de 7
+Pastas Compiladas Corretamente: 4 de 4 
+Pastas Linkadas Corretamente: 4 de 4
 Teste main
-  - Resultados corretos: 0 de 6
-  - Valgrinds corretos: 0 de 6
-Nota de scopel para o teste main: 0
+  - Resultados corretos: 6 de 6
+  - Valgrinds corretos: 6 de 6
+Nota de scopel para o teste main: 3.00
 Teste paciente
-  - Resultados corretos: 0 de 6
-  - Valgrinds corretos: 0 de 6
-Nota de scopel para o teste paciente: 0
+  - Resultados corretos: 6 de 6
+  - Valgrinds corretos: 6 de 6
+Nota de scopel para o teste paciente: 3.00
 Teste lesao
   - Resultados corretos: 6 de 6
   - Valgrinds corretos: 6 de 6
@@ -17,5 +17,5 @@ Teste data
   - Resultados corretos: 6 de 6
   - Valgrinds corretos: 6 de 6
 Nota de scopel para o teste data: 1.00
-Nota de scopel: 0+(0)+(3.00)+(0)+(1.00)
-Nota de scopel: 4.00
+Nota de scopel: 0+(3.00)+(3.00)+(3.00)+(1.00)
+Nota de scopel: 10.00
