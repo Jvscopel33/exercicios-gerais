@@ -70,7 +70,7 @@ tLocadora lerCadastroLocadora(tLocadora locadora)
     tFilme f;
     scanf(" %d,", &cod);
     f = leFilme(cod);
-    cadastrarFilmeLocadora(locadora, f);
+    locadora = cadastrarFilmeLocadora(locadora, f);
     return locadora;
 }
 
@@ -83,12 +83,19 @@ tLocadora lerCadastroLocadora(tLocadora locadora)
  */
 tLocadora alugarFilmesLocadora(tLocadora locadora, int *codigos, int quantidadeCodigos)
 {
-    for (int i; i < quantidadeCodigos; i++)
+
+    for (int i = 0; i < quantidadeCodigos; i++)
     {
-        if (ehMesmoCodigoFilme(locadora.filme[i], codigos[i]))
+        for (int j = 0; j < locadora.numFilmes; j++)
         {
-            locadora.filme[i] = alugarFilme(locadora.filme[i]);
-            locadora.lucro += obterValorFilme(locadora.filme[i]);
+            if (ehMesmoCodigoFilme(locadora.filme[j], codigos[i]))
+            {
+                if (obterQtdEstoqueFilme(locadora.filme[j]) > 0)
+                {
+                    locadora.filme[j] = alugarFilme(locadora.filme[i]);
+                    locadora.lucro += obterValorFilme(locadora.filme[i]);
+                }
+            }
         }
     }
     return locadora;
@@ -123,11 +130,14 @@ tLocadora lerAluguelLocadora(tLocadora locadora)
  */
 tLocadora devolverFilmesLocadora(tLocadora locadora, int *codigos, int quantidadeCodigos)
 {
-    for (int i; i < quantidadeCodigos; i++)
+    for (int i = 0; i < quantidadeCodigos; i++)
     {
-        if (ehMesmoCodigoFilme(locadora.filme[i], codigos[i]))
+        for (int j = 0; j < locadora.numFilmes; j++)
         {
-            locadora.filme[i] = devolverFilme(locadora.filme[i]);
+            if (ehMesmoCodigoFilme(locadora.filme[j], codigos[i]))
+            {
+                locadora.filme[j] = devolverFilme(locadora.filme[i]);
+            }
         }
     }
     return locadora;
@@ -173,6 +183,7 @@ tLocadora ordenarFilmesLocadora(tLocadora locadora)
             }
         }
     }
+    return locadora;
 }
 
 /**
@@ -186,7 +197,7 @@ void consultarEstoqueLocadora(tLocadora locadora)
     {
         printf("%d - ", obterCodigoFilme(locadora.filme[i]));
         imprimirNomeFilme(locadora.filme[i]);
-        printf("Fitas em estoque: %d\n", obterQtdEstoqueFilme(locadora.filme[i]));
+        printf(" Fitas em estoque: %d\n", obterQtdEstoqueFilme(locadora.filme[i]));
     }
 }
 

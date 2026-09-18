@@ -2,4 +2,5 @@ Filme cadastrado 1 - Final Fantasy
 
 
 ~ESTOQUE~
-Lucro total R$0
+1 - Final Fantasy Fitas em estoque: 0
+Lucro total R$5

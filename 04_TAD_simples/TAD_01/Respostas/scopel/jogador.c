@@ -50,7 +50,6 @@ tTabuleiro JogaJogador(tJogador jogador, tTabuleiro tabuleiro)
             printf("Posicao invalida (OCUPADA - [%d,%d] )!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
             continue;
         }
-
         tabuleiro = MarcaPosicaoTabuleiro(tabuleiro, jogador.id, ObtemJogadaX(jogada), ObtemJogadaY(jogada));
         printf("Jogada [%d,%d]!\n", ObtemJogadaX(jogada), ObtemJogadaY(jogada));
         return tabuleiro;

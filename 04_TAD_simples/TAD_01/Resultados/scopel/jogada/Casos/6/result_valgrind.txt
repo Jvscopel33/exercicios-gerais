@@ -1,15 +1,15 @@
-==181830== Memcheck, a memory error detector
-==181830== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==181830== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==181830== Command: Resultados/scopel/jogada/prog Resultados/scopel/jogada/Casos/6
-==181830== Parent PID: 181829
-==181830== 
-==181830== 
-==181830== HEAP SUMMARY:
-==181830==     in use at exit: 0 bytes in 0 blocks
-==181830==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
-==181830== 
-==181830== All heap blocks were freed -- no leaks are possible
-==181830== 
-==181830== For lists of detected and suppressed errors, rerun with: -s
-==181830== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==147519== Memcheck, a memory error detector
+==147519== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==147519== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==147519== Command: Resultados/scopel/jogada/prog Resultados/scopel/jogada/Casos/6
+==147519== Parent PID: 147517
+==147519== 
+==147519== 
+==147519== HEAP SUMMARY:
+==147519==     in use at exit: 0 bytes in 0 blocks
+==147519==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==147519== 
+==147519== All heap blocks were freed -- no leaks are possible
+==147519== 
+==147519== For lists of detected and suppressed errors, rerun with: -s
+==147519== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

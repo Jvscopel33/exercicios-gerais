@@ -3,4 +3,5 @@ Filme cadastrado 1 - Donnie Darko
 
 
 ~ESTOQUE~
+1 - Donnie Darko Fitas em estoque: 1
 Lucro total R$0

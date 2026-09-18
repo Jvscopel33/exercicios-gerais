@@ -1,0 +1,21 @@
+Arquivos Esperados Corretos: 4 de 5
+Pastas Compiladas Corretamente: 3 de 4 
+Pastas Linkadas Corretamente: 2 de 4
+Teste main
+  - Resultados corretos: 0 de 5
+  - Valgrinds corretos: 0 de 5
+Nota de scopel para o teste main: 0
+Teste completo
+  - Resultados corretos: 0 de 5
+  - Valgrinds corretos: 0 de 5
+Nota de scopel para o teste completo: 0
+Teste empresa
+  - Resultados corretos: 1 de 5
+  - Valgrinds corretos: 5 de 5
+Nota de scopel para o teste empresa: .50
+Teste funcionario
+  - Resultados corretos: 5 de 5
+  - Valgrinds corretos: 5 de 5
+Nota de scopel para o teste funcionario: 2.50
+Nota de scopel: 0+(0)+(2.50)+(0)+(.50)
+Nota de scopel: 3.00

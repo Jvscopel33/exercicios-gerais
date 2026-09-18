@@ -1,86 +1,122 @@
-==89551== Memcheck, a memory error detector
-==89551== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==89551== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==89551== Command: Resultados/scopel/locadora/prog Resultados/scopel/locadora/Casos/18
-==89551== Parent PID: 89550
-==89551== 
-==89551== Conditional jump or move depends on uninitialised value(s)
-==89551==    at 0x109A80: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Use of uninitialised value of size 8
-==89551==    at 0x10991B: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Use of uninitialised value of size 8
-==89551==    at 0x109943: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Conditional jump or move depends on uninitialised value(s)
-==89551==    at 0x109974: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Use of uninitialised value of size 8
-==89551==    at 0x1099C0: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Use of uninitialised value of size 8
-==89551==    at 0x1099F8: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Use of uninitialised value of size 8
-==89551==    at 0x109A3B: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109BC0: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A3EE: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Conditional jump or move depends on uninitialised value(s)
-==89551==    at 0x109D7C: devolverFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x109EBC: lerDevolucaoLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A46F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Conditional jump or move depends on uninitialised value(s)
-==89551==    at 0x48C90CB: __printf_buffer (vfprintf-process-arg.c:58)
-==89551==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
-==89551==    by 0x48BF1B2: printf (printf.c:33)
-==89551==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Use of uninitialised value of size 8
-==89551==    at 0x48BE0BB: _itoa_word (_itoa.c:183)
-==89551==    by 0x48C8C9B: __printf_buffer (vfprintf-process-arg.c:155)
-==89551==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
-==89551==    by 0x48BF1B2: printf (printf.c:33)
-==89551==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Conditional jump or move depends on uninitialised value(s)
-==89551==    at 0x48BE0CC: _itoa_word (_itoa.c:183)
-==89551==    by 0x48C8C9B: __printf_buffer (vfprintf-process-arg.c:155)
-==89551==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
-==89551==    by 0x48BF1B2: printf (printf.c:33)
-==89551==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== Conditional jump or move depends on uninitialised value(s)
-==89551==    at 0x48C8D85: __printf_buffer (vfprintf-process-arg.c:186)
-==89551==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
-==89551==    by 0x48BF1B2: printf (printf.c:33)
-==89551==    by 0x10A2B1: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551==    by 0x10A5AB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
-==89551== 
-==89551== 
-==89551== HEAP SUMMARY:
-==89551==     in use at exit: 0 bytes in 0 blocks
-==89551==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
-==89551== 
-==89551== All heap blocks were freed -- no leaks are possible
-==89551== 
-==89551== Use --track-origins=yes to see where uninitialised values come from
-==89551== For lists of detected and suppressed errors, rerun with: -s
-==89551== ERROR SUMMARY: 51 errors from 12 contexts (suppressed: 0 from 0)
+==118003== Memcheck, a memory error detector
+==118003== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==118003== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==118003== Command: Resultados/scopel/locadora/prog Resultados/scopel/locadora/Casos/18
+==118003== Parent PID: 118002
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x10997E: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x109C38: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A4DB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x1099D9: alugarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x109C38: lerAluguelLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A4DB: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x48C90CB: __printf_buffer (vfprintf-process-arg.c:58)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A2A3: consultarEstoqueLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A62F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Use of uninitialised value of size 8
+==118003==    at 0x48BE0BB: _itoa_word (_itoa.c:183)
+==118003==    by 0x48C8C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A2A3: consultarEstoqueLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A62F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x48BE0CC: _itoa_word (_itoa.c:183)
+==118003==    by 0x48C8C9B: __printf_buffer (vfprintf-process-arg.c:155)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A2A3: consultarEstoqueLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A62F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x48C8D85: __printf_buffer (vfprintf-process-arg.c:186)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A2A3: consultarEstoqueLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A62F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x484F289: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==118003==    by 0x48C9DA7: __printf_buffer (vfprintf-process-arg.c:435)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x109358: imprimirNomeFilme (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A2F2: consultarEstoqueLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A62F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x48C90CB: __printf_buffer (vfprintf-process-arg.c:58)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A35F: consultarEstoqueLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A62F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x48C8D89: __printf_buffer (vfprintf-process-arg.c:186)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A35F: consultarEstoqueLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A62F: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x109D5C: devolverFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x109F5A: lerDevolucaoLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A55C: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x10957D: verificarFilmeCadastrado (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x109626: cadastrarFilmeLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10985C: lerCadastroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A450: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x485042C: __strcmp_sse42 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==118003==    by 0x10945E: compararNomesFilmes (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A09A: ordenarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A5E1: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x485044B: __strcmp_sse42 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==118003==    by 0x10945E: compararNomesFilmes (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A09A: ordenarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A5E1: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x4850454: __strcmp_sse42 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==118003==    by 0x10945E: compararNomesFilmes (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A09A: ordenarFilmesLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A5E1: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x48C90CB: __printf_buffer (vfprintf-process-arg.c:58)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A39E: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A698: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== Conditional jump or move depends on uninitialised value(s)
+==118003==    at 0x48C8D85: __printf_buffer (vfprintf-process-arg.c:186)
+==118003==    by 0x48CA73A: __vfprintf_internal (vfprintf-internal.c:1544)
+==118003==    by 0x48BF1B2: printf (printf.c:33)
+==118003==    by 0x10A39E: consultarLucroLocadora (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003==    by 0x10A698: main (in /home/joao_scopel/Prog2/04_TAD_simples/TAD_03/Resultados/scopel/locadora/prog)
+==118003== 
+==118003== 
+==118003== HEAP SUMMARY:
+==118003==     in use at exit: 0 bytes in 0 blocks
+==118003==   total heap usage: 2 allocs, 2 frees, 8,192 bytes allocated
+==118003== 
+==118003== All heap blocks were freed -- no leaks are possible
+==118003== 
+==118003== Use --track-origins=yes to see where uninitialised values come from
+==118003== For lists of detected and suppressed errors, rerun with: -s
+==118003== ERROR SUMMARY: 128 errors from 16 contexts (suppressed: 0 from 0)

@@ -1,16 +1,20 @@
 Filme cadastrado 21 - The Last Castle
 
 ~ESTOQUE~
+21 - The Last Castle Fitas em estoque: 5
 
 
 
 
 
 ~ESTOQUE~
+21 - The Last Castle Fitas em estoque: 4
 
 Filme cadastrado 26 - Vanilla Sky
 
 ~ESTOQUE~
+21 - The Last Castle Fitas em estoque: 4
+26 - Vanilla Sky Fitas em estoque: 5
 
 
 
@@ -23,4 +27,6 @@ Filme cadastrado 26 - Vanilla Sky
 
 
 ~ESTOQUE~
-Lucro total R$0
+21 - The Last Castle Fitas em estoque: 5
+21 - The Last Castle Fitas em estoque: 6
+Lucro total R$20

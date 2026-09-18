@@ -2,4 +2,5 @@ Filme cadastrado 1 - A Sociedade Do Anel
 
 
 ~ESTOQUE~
-Lucro total R$0
+1 - A Sociedade Do Anel Fitas em estoque: 0
+Lucro total R$5

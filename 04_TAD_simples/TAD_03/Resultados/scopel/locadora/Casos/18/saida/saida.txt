@@ -1,12 +1,15 @@
 Filme cadastrado 1 - Hannibal
 
 ~ESTOQUE~
+1 - Hannibal Fitas em estoque: 1
 
 
 ~ESTOQUE~
+0 -  Fitas em estoque: -1
 
 
 ~ESTOQUE~
+0 -  Fitas em estoque: -1
 
 
 
@@ -15,12 +18,18 @@ Filme cadastrado 15 - Shrek
 
 
 ~ESTOQUE~
+0 -  Fitas em estoque: -1
+0 -  Fitas em estoque: -1
 
 
 
 ~ESTOQUE~
+0 -  Fitas em estoque: -1
+0 -  Fitas em estoque: -1
 
 
 
 ~ESTOQUE~
+0 -  Fitas em estoque: -1
+0 -  Fitas em estoque: -1
 Lucro total R$0
