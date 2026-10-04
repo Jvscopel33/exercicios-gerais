@@ -1,0 +1,4 @@
+main.c: In function ‘main’:
+main.c:9:30: warning: initialization of ‘tAluno **’ {aka ‘struct Aluno **’} from incompatible pointer type ‘tAluno *’ {aka ‘struct Aluno *’} [-Wincompatible-pointer-types]
+    9 |     tAluno **listaDeAlunos = (tAluno *)calloc(n, sizeof(tAluno *));
+      |                              ^
