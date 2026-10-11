@@ -1,0 +1,26 @@
+==110557== Memcheck, a memory error detector
+==110557== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==110557== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==110557== Command: Resultados/scopel/completo/prog Resultados/scopel/completo/Casos/2
+==110557== Parent PID: 110556
+==110557== 
+==110557== 
+==110557== HEAP SUMMARY:
+==110557==     in use at exit: 472 bytes in 3 blocks
+==110557==   total heap usage: 4 allocs, 1 frees, 4,568 bytes allocated
+==110557== 
+==110557== 472 (224 direct, 248 indirect) bytes in 1 blocks are definitely lost in loss record 3 of 3
+==110557==    at 0x484D953: calloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==110557==    by 0x1097A1: criaPaciente (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/completo/prog)
+==110557==    by 0x1098F1: lerPaciente (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/completo/prog)
+==110557==    by 0x1096B6: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/completo/prog)
+==110557== 
+==110557== LEAK SUMMARY:
+==110557==    definitely lost: 224 bytes in 1 blocks
+==110557==    indirectly lost: 248 bytes in 2 blocks
+==110557==      possibly lost: 0 bytes in 0 blocks
+==110557==    still reachable: 0 bytes in 0 blocks
+==110557==         suppressed: 0 bytes in 0 blocks
+==110557== 
+==110557== For lists of detected and suppressed errors, rerun with: -s
+==110557== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
