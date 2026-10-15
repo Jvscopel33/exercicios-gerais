@@ -1,0 +1,10 @@
+/usr/bin/ld: Resultados/scopel/data/main.o: in function `criaRelatorio':
+main.c:(.text+0xef): undefined reference to `criaData'
+/usr/bin/ld: main.c:(.text+0x257): undefined reference to `liberaData'
+/usr/bin/ld: Resultados/scopel/data/paciente.o: in function `lerPaciente':
+paciente.c:(.text+0xc9): undefined reference to `lerData'
+/usr/bin/ld: Resultados/scopel/data/paciente.o: in function `calculaIdadePaciente':
+paciente.c:(.text+0x1cb): undefined reference to `diferencaAnoData'
+/usr/bin/ld: Resultados/scopel/data/paciente.o: in function `liberaPaciente':
+paciente.c:(.text+0x328): undefined reference to `liberaData'
+collect2: error: ld returned 1 exit status

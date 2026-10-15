@@ -1,0 +1,6 @@
+/usr/bin/ld: Resultados/scopel/empresa/main.o: in function `main':
+/home/bruno/github/script-de-correcao/TAD_pont_09/Gabarito-src/main.c:13:(.text+0x73): undefined reference to `CriaEmpresa'
+/usr/bin/ld: /home/bruno/github/script-de-correcao/TAD_pont_09/Gabarito-src/main.c:14:(.text+0x95): undefined reference to `LeEmpresa'
+/usr/bin/ld: /home/bruno/github/script-de-correcao/TAD_pont_09/Gabarito-src/main.c:18:(.text+0xc9): undefined reference to `ImprimeEmpresa'
+/usr/bin/ld: /home/bruno/github/script-de-correcao/TAD_pont_09/Gabarito-src/main.c:22:(.text+0xfd): undefined reference to `ApagaEmpresa'
+collect2: error: ld returned 1 exit status
