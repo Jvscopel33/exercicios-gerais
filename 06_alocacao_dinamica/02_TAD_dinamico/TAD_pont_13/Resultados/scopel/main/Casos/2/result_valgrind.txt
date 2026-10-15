@@ -1,30 +1,15 @@
-==10435== Memcheck, a memory error detector
-==10435== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==10435== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==10435== Command: Resultados/scopel/main/prog Resultados/scopel/main/Casos/2
-==10435== Parent PID: 10434
-==10435== 
-==10435== Invalid free() / delete / delete[] / realloc()
-==10435==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==10435==    by 0x1095EE: liberaLesao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435==    by 0x1099BE: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435==  Address 0x4a76290 is 0 bytes inside a block of size 236 free'd
-==10435==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==10435==    by 0x1095EE: liberaLesao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435==    by 0x109CFB: liberaPaciente (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435==    by 0x10997E: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435==  Block was alloc'd at
-==10435==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==10435==    by 0x109403: criaLesao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435==    by 0x109557: lerLesao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435==    by 0x10979C: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_13/Resultados/scopel/main/prog)
-==10435== 
-==10435== 
-==10435== HEAP SUMMARY:
-==10435==     in use at exit: 0 bytes in 0 blocks
-==10435==   total heap usage: 8 allocs, 9 frees, 8,692 bytes allocated
-==10435== 
-==10435== All heap blocks were freed -- no leaks are possible
-==10435== 
-==10435== For lists of detected and suppressed errors, rerun with: -s
-==10435== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==172461== Memcheck, a memory error detector
+==172461== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==172461== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==172461== Command: Resultados/scopel/main/prog Resultados/scopel/main/Casos/2
+==172461== Parent PID: 172460
+==172461== 
+==172461== 
+==172461== HEAP SUMMARY:
+==172461==     in use at exit: 0 bytes in 0 blocks
+==172461==   total heap usage: 7 allocs, 7 frees, 8,684 bytes allocated
+==172461== 
+==172461== All heap blocks were freed -- no leaks are possible
+==172461== 
+==172461== For lists of detected and suppressed errors, rerun with: -s
+==172461== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
