@@ -1,0 +1,7 @@
+array.c: In function ‘OrdenarArray’:
+array.c:63:21: warning: assignment to ‘Array *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   63 |                 aux = array->data[j + 1];
+      |                     ^
+array.c:65:32: warning: assignment to ‘int’ from ‘Array *’ makes integer from pointer without a cast [-Wint-conversion]
+   65 |                 array->data[j] = aux;
+      |                                ^
