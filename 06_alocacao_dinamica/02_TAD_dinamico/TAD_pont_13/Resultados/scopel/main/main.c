@@ -25,11 +25,11 @@ int calculaMediaIdade(Paciente **p, int qtd)
 int main()
 {
     Paciente **p = NULL;
-    Lesao **lesoes = NULL;
 
     int qtdPacientes = 0;
     int mediaIdade = 0;
     int qtdLesao = 0;
+    int vinc = 0;
     int malig = 0;
     char cmd;
 
@@ -44,22 +44,25 @@ int main()
         }
         else if (cmd == 'L')
         {
-            lesoes = realloc(lesoes, (qtdLesao + 1) * sizeof(Lesao *));
-            lesoes[qtdLesao] = lerLesao();
-
+            vinc = 0;
+            Lesao *l = lerLesao();
             for (int i = 0; i < qtdPacientes; i++)
             {
-                if (!strcmp(getCartaoSusLesao(lesoes[qtdLesao]), getCartaoSusPaciente(p[i])))
+                if (!strcmp(getCartaoSusLesao(l), getCartaoSusPaciente(p[i])))
                 {
-                    vinculaLesaoPaciente(p[i], lesoes[qtdLesao]);
-                    if (verificaCirurgicaLesao(lesoes[qtdLesao]))
+                    vinculaLesaoPaciente(p[i], l);
+                    vinc = 1;
+                    if (verificaCirurgicaLesao(l))
                     {
                         malig++;
                     }
                     break;
                 }
             }
-            qtdLesao++;
+            if (!vinc)
+            {
+                free(l);
+            }
         }
         scanf(" %c\n", &cmd);
     }
@@ -67,7 +70,18 @@ int main()
     mediaIdade = calculaMediaIdade(p, qtdPacientes);
 
     printf("TOTAL PACIENTES: %d\n", qtdPacientes);
-    printf("MEDIA IDADE (ANOS): %d\n", mediaIdade);
+    if (mediaIdade)
+    {
+        printf("MEDIA IDADE (ANOS): %d\n", mediaIdade);
+    }
+    else
+    {
+        printf("MEDIA IDADE (ANOS): -\n");
+    }
+    for (int i = 0; i < qtdPacientes; i++)
+    {
+        qtdLesao += getNumLesoesPaciente(p[i]);
+    }
     printf("TOTAL LESOES: %d\n", qtdLesao);
     printf("TOTAL CIRURGIAS: %d\n", malig);
     printf("LISTA DE PACIENTES:\n");
@@ -81,10 +95,5 @@ int main()
         liberaPaciente(p[i]);
     }
     free(p);
-    for (int i = 0; i < qtdLesao; i++)
-    {
-        liberaLesao(lesoes[i]);
-    }
-    free(lesoes);
     return 0;
 }
