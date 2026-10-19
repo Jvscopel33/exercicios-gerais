@@ -1,0 +1,37 @@
+==46345== Memcheck, a memory error detector
+==46345== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==46345== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==46345== Command: Resultados/scopel/completo/prog Resultados/scopel/completo/Casos/3
+==46345== Parent PID: 46344
+==46345== 
+==46345== Invalid read of size 8
+==46345==    at 0x1097C8: RealizaEleicao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==46345==    by 0x109F90: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==46345==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==46345== 
+==46345== 
+==46345== Process terminating with default action of signal 11 (SIGSEGV)
+==46345==  Access not within mapped region at address 0x0
+==46345==    at 0x1097C8: RealizaEleicao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==46345==    by 0x109F90: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==46345==  If you believe this happened as a result of a stack
+==46345==  overflow in your program's main thread (unlikely but
+==46345==  possible), you can try to increase the size of the
+==46345==  main thread stack using the --main-stacksize= flag.
+==46345==  The main thread stack size used in this run was 8388608.
+==46345== 
+==46345== HEAP SUMMARY:
+==46345==     in use at exit: 4,208 bytes in 4 blocks
+==46345==   total heap usage: 19 allocs, 15 frees, 5,168 bytes allocated
+==46345== 
+==46345== LEAK SUMMARY:
+==46345==    definitely lost: 0 bytes in 0 blocks
+==46345==    indirectly lost: 0 bytes in 0 blocks
+==46345==      possibly lost: 0 bytes in 0 blocks
+==46345==    still reachable: 4,208 bytes in 4 blocks
+==46345==         suppressed: 0 bytes in 0 blocks
+==46345== Reachable blocks (those to which a pointer was found) are not shown.
+==46345== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==46345== 
+==46345== For lists of detected and suppressed errors, rerun with: -s
+==46345== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

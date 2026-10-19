@@ -1,0 +1,6 @@
+==48676== Memcheck, a memory error detector
+==48676== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==48676== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==48676== Command: Resultados/scopel/eleicao/prog Resultados/scopel/eleicao/Casos/4
+==48676== Parent PID: 48675
+==48676== 

@@ -1,0 +1,37 @@
+==47432== Memcheck, a memory error detector
+==47432== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==47432== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==47432== Command: Resultados/scopel/completo/prog Resultados/scopel/completo/Casos/8
+==47432== Parent PID: 47431
+==47432== 
+==47432== Invalid read of size 8
+==47432==    at 0x1097C8: RealizaEleicao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47432==    by 0x109F90: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47432==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==47432== 
+==47432== 
+==47432== Process terminating with default action of signal 11 (SIGSEGV)
+==47432==  Access not within mapped region at address 0x0
+==47432==    at 0x1097C8: RealizaEleicao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47432==    by 0x109F90: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47432==  If you believe this happened as a result of a stack
+==47432==  overflow in your program's main thread (unlikely but
+==47432==  possible), you can try to increase the size of the
+==47432==  main thread stack using the --main-stacksize= flag.
+==47432==  The main thread stack size used in this run was 8388608.
+==47432== 
+==47432== HEAP SUMMARY:
+==47432==     in use at exit: 4,208 bytes in 4 blocks
+==47432==   total heap usage: 16 allocs, 12 frees, 4,976 bytes allocated
+==47432== 
+==47432== LEAK SUMMARY:
+==47432==    definitely lost: 0 bytes in 0 blocks
+==47432==    indirectly lost: 0 bytes in 0 blocks
+==47432==      possibly lost: 0 bytes in 0 blocks
+==47432==    still reachable: 4,208 bytes in 4 blocks
+==47432==         suppressed: 0 bytes in 0 blocks
+==47432== Reachable blocks (those to which a pointer was found) are not shown.
+==47432== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==47432== 
+==47432== For lists of detected and suppressed errors, rerun with: -s
+==47432== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

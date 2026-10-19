@@ -1,0 +1,37 @@
+==47676== Memcheck, a memory error detector
+==47676== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==47676== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==47676== Command: Resultados/scopel/completo/prog Resultados/scopel/completo/Casos/9
+==47676== Parent PID: 47675
+==47676== 
+==47676== Invalid read of size 8
+==47676==    at 0x1097C8: RealizaEleicao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47676==    by 0x109F90: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47676==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==47676== 
+==47676== 
+==47676== Process terminating with default action of signal 11 (SIGSEGV)
+==47676==  Access not within mapped region at address 0x0
+==47676==    at 0x1097C8: RealizaEleicao (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47676==    by 0x109F90: main (in /home/joao_scopel/Prog2/06_alocacao_dinamica/02_TAD_dinamico/TAD_pont_02/Resultados/scopel/completo/prog)
+==47676==  If you believe this happened as a result of a stack
+==47676==  overflow in your program's main thread (unlikely but
+==47676==  possible), you can try to increase the size of the
+==47676==  main thread stack using the --main-stacksize= flag.
+==47676==  The main thread stack size used in this run was 8388608.
+==47676== 
+==47676== HEAP SUMMARY:
+==47676==     in use at exit: 4,208 bytes in 4 blocks
+==47676==   total heap usage: 22 allocs, 18 frees, 5,360 bytes allocated
+==47676== 
+==47676== LEAK SUMMARY:
+==47676==    definitely lost: 0 bytes in 0 blocks
+==47676==    indirectly lost: 0 bytes in 0 blocks
+==47676==      possibly lost: 0 bytes in 0 blocks
+==47676==    still reachable: 4,208 bytes in 4 blocks
+==47676==         suppressed: 0 bytes in 0 blocks
+==47676== Reachable blocks (those to which a pointer was found) are not shown.
+==47676== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==47676== 
+==47676== For lists of detected and suppressed errors, rerun with: -s
+==47676== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

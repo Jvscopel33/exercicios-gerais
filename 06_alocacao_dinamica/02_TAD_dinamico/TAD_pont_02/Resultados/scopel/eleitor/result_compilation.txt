@@ -1,0 +1,7 @@
+eleitor.c: In function ‘LeEleitor’:
+eleitor.c:45:12: warning: ‘return’ with a value, in function returning void [-Wreturn-type]
+   45 |     return eleitor;
+      |            ^~~~~~~
+eleitor.c:42:6: note: declared here
+   42 | void LeEleitor(tEleitor *eleitor)
+      |      ^~~~~~~~~
