@@ -1,0 +1,15 @@
+==94482== Memcheck, a memory error detector
+==94482== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==94482== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==94482== Command: Resultados/scopel/main/prog Resultados/scopel/main/Casos/5
+==94482== Parent PID: 94481
+==94482== 
+==94482== 
+==94482== HEAP SUMMARY:
+==94482==     in use at exit: 0 bytes in 0 blocks
+==94482==   total heap usage: 3 allocs, 3 frees, 8,204 bytes allocated
+==94482== 
+==94482== All heap blocks were freed -- no leaks are possible
+==94482== 
+==94482== For lists of detected and suppressed errors, rerun with: -s
+==94482== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
