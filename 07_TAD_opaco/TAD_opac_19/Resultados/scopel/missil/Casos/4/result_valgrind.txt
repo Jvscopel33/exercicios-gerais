@@ -1,0 +1,15 @@
+==80970== Memcheck, a memory error detector
+==80970== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==80970== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==80970== Command: Resultados/scopel/missil/prog Resultados/scopel/missil/Casos/4
+==80970== Parent PID: 80969
+==80970== 
+==80970== 
+==80970== HEAP SUMMARY:
+==80970==     in use at exit: 0 bytes in 0 blocks
+==80970==   total heap usage: 26 allocs, 26 frees, 9,944 bytes allocated
+==80970== 
+==80970== All heap blocks were freed -- no leaks are possible
+==80970== 
+==80970== For lists of detected and suppressed errors, rerun with: -s
+==80970== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
