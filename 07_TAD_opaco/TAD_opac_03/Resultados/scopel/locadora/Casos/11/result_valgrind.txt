@@ -1,0 +1,211 @@
+==53633== Memcheck, a memory error detector
+==53633== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==53633== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==53633== Command: Resultados/scopel/locadora/prog Resultados/scopel/locadora/Casos/11
+==53633== Parent PID: 53632
+==53633== 
+==53633== Conditional jump or move depends on uninitialised value(s)
+==53633==    at 0x484DB24: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x109854: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x10943B: EhMesmoCodigoFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109770: AlugarFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1098AB: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760d0 is 0 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x10940E: ObterQtdEstoqueFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109793: AlugarFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1098AB: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760ec is 28 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x109458: AlugarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1097B6: AlugarFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1098AB: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760f0 is 32 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid write of size 4
+==53633==    at 0x109462: AlugarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1097B6: AlugarFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1098AB: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760f0 is 32 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x109469: AlugarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1097B6: AlugarFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1098AB: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760ec is 28 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid write of size 4
+==53633==    at 0x109473: AlugarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1097B6: AlugarFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1098AB: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760ec is 28 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x1093F9: ObterValorFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1097D5: AlugarFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1098AB: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760e8 is 24 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Conditional jump or move depends on uninitialised value(s)
+==53633==    at 0x484DB24: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1099DD: LerDevolucaoLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D5E: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x10943B: EhMesmoCodigoFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109928: DevolverFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109A34: LerDevolucaoLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D5E: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760d0 is 0 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x10940E: ObterQtdEstoqueFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x10994B: DevolverFilmesLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109A34: LerDevolucaoLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D5E: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760ec is 28 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid read of size 4
+==53633==    at 0x10940E: ObterQtdEstoqueFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109BA9: ConsultarEstoqueLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D9C: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760ec is 28 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== Invalid free() / delete / delete[] / realloc()
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109578: DestruirLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109DEB: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Address 0x4a760d0 is 0 bytes inside a block of size 36 free'd
+==53633==    at 0x484988F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x10939F: DestruirFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096F3: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==  Block was alloc'd at
+==53633==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x1092BE: CriarFilme (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x1096A4: LerCadastroLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109CED: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== 
+==53633== HEAP SUMMARY:
+==53633==     in use at exit: 12 bytes in 1 blocks
+==53633==   total heap usage: 9 allocs, 9 frees, 8,280 bytes allocated
+==53633== 
+==53633== 12 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==53633==    at 0x484DB80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==53633==    by 0x109854: LerAluguelLocadora (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633==    by 0x109D29: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_03/Resultados/scopel/locadora/prog)
+==53633== 
+==53633== LEAK SUMMARY:
+==53633==    definitely lost: 12 bytes in 1 blocks
+==53633==    indirectly lost: 0 bytes in 0 blocks
+==53633==      possibly lost: 0 bytes in 0 blocks
+==53633==    still reachable: 0 bytes in 0 blocks
+==53633==         suppressed: 0 bytes in 0 blocks
+==53633== 
+==53633== Use --track-origins=yes to see where uninitialised values come from
+==53633== For lists of detected and suppressed errors, rerun with: -s
+==53633== ERROR SUMMARY: 16 errors from 14 contexts (suppressed: 0 from 0)
