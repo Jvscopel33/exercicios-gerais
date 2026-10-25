@@ -1,4 +1,6 @@
+Filme cadastrado 2 - Tomb Raider
 
+Filme 1 nao cadastrado.
 
 ~ESTOQUE~
 2 - Tomb Raider Fitas em estoque: 1
@@ -6,4 +8,5 @@
 
 
 ~ESTOQUE~
+2 - Tomb Raider Fitas em estoque: 2
 Lucro total R$5

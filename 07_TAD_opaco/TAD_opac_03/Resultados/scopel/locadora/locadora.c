@@ -73,9 +73,13 @@ int VerificarFilmeCadastrado(tLocadora *locadora, int codigo)
 
 void CadastrarFilmeLocadora(tLocadora *locadora, tFilme *filme)
 {
-    locadora->filmes = (tFilme **)realloc(locadora->filmes, (locadora->qtdFilmes + 1) * sizeof(tLocadora *));
+
+    locadora->filmes = (tFilme **)realloc(locadora->filmes, (locadora->qtdFilmes + 1) * sizeof(tFilme *));
     locadora->filmes[locadora->qtdFilmes] = filme;
     locadora->qtdFilmes++;
+    printf("Filme cadastrado %d - ", ObterCodigoFilme(filme));
+    ImprimirNomeFilme(filme);
+    printf("\n");
 }
 
 /**
@@ -89,8 +93,14 @@ void LerCadastroLocadora(tLocadora *Locadora)
     tFilme *f = CriarFilme();
     scanf(" %d,", &cod);
     LeFilme(f, cod);
-    CadastrarFilmeLocadora(Locadora, f);
-    DestruirFilme(f);
+    if (!VerificarFilmeCadastrado(Locadora, cod))
+    {
+        CadastrarFilmeLocadora(Locadora, f);
+    }
+    else
+    {
+        DestruirFilme(f);
+    }
 }
 
 /**
@@ -102,18 +112,24 @@ void LerCadastroLocadora(tLocadora *Locadora)
  */
 void AlugarFilmesLocadora(tLocadora *locadora, int *codigos, int quantidadeCodigos)
 {
-    for (int j = 0; j < locadora->qtdFilmes; j++)
+
+    for (int i = 0; i < quantidadeCodigos; i++)
     {
-        for (int i = 0; i < quantidadeCodigos; i++)
+        int encontrou = 0;
+        for (int j = 0; j < locadora->qtdFilmes; j++)
         {
-            if (EhMesmoCodigoFilme(locadora->filmes[j], codigos[i]))
+            if (VerificarFilmeCadastrado(locadora, codigos[i]))
             {
-                if (ObterQtdEstoqueFilme(locadora->filmes[j]) > 0)
+                encontrou++;
+                if (ObterQtdEstoqueFilme(locadora->filmes[j]) < ObterQtdAlugadaFilme(locadora->filmes[j]))
                 {
                     AlugarFilme(locadora->filmes[j]);
-                    locadora->lucro += ObterValorFilme(locadora->filmes[j]);
                 }
             }
+        }
+        if (!encontrou)
+        {
+            printf("Filme %d nao cadastrado.\n", codigos[i]);
         }
     }
 }
@@ -125,8 +141,8 @@ void AlugarFilmesLocadora(tLocadora *locadora, int *codigos, int quantidadeCodig
  */
 void LerAluguelLocadora(tLocadora *locadora)
 {
-    int *codigos;
-    int cod;
+    int *codigos = NULL;
+    int cod = 0;
     int qtdcodigos = 0;
     while (scanf(" %d\n", &cod) == 1)
     {
@@ -134,7 +150,9 @@ void LerAluguelLocadora(tLocadora *locadora)
         codigos[qtdcodigos] = cod;
         qtdcodigos++;
     }
+    getchar();
     AlugarFilmesLocadora(locadora, codigos, qtdcodigos);
+    free(codigos);
 }
 
 /**
@@ -155,6 +173,7 @@ void DevolverFilmesLocadora(tLocadora *locadora, int *codigos, int quantidadeCod
                 if (ObterQtdEstoqueFilme(locadora->filmes[j]) > 0)
                 {
                     DevolverFilme(locadora->filmes[j]);
+                    locadora->lucro += ObterValorFilme(locadora->filmes[j]);
                 }
             }
         }
@@ -168,7 +187,7 @@ void DevolverFilmesLocadora(tLocadora *locadora, int *codigos, int quantidadeCod
  */
 void LerDevolucaoLocadora(tLocadora *locadora)
 {
-    int *codigos;
+    int *codigos = NULL;
     int cod;
     int qtdcodigos = 0;
     while (scanf(" %d\n", &cod) == 1)
@@ -230,5 +249,8 @@ void ConsultarEstoqueLocadora(tLocadora *locadora)
  */
 void ConsultarLucroLocadora(tLocadora *locadora)
 {
-    printf("Lucro total R$%d\n", locadora->lucro);
+    if (locadora->lucro > 0)
+    {
+        printf("Lucro total R$%d\n", locadora->lucro);
+    }
 }
