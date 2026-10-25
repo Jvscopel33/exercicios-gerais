@@ -1,0 +1,23 @@
+==175175== Memcheck, a memory error detector
+==175175== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==175175== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==175175== Command: Resultados/scopel/aluno/prog Resultados/scopel/aluno/Casos/2
+==175175== Parent PID: 175174
+==175175== 
+==175175== Invalid write of size 1
+==175175==    at 0x10930F: LeAluno (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
+==175175==    by 0x10955A: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
+==175175==  Address 0x4a76225 is 0 bytes after a block of size 5 alloc'd
+==175175==    at 0x484DB80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==175175==    by 0x1092DC: LeAluno (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
+==175175==    by 0x10955A: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
+==175175== 
+==175175== 
+==175175== HEAP SUMMARY:
+==175175==     in use at exit: 0 bytes in 0 blocks
+==175175==   total heap usage: 7 allocs, 7 frees, 4,135 bytes allocated
+==175175== 
+==175175== All heap blocks were freed -- no leaks are possible
+==175175== 
+==175175== For lists of detected and suppressed errors, rerun with: -s
+==175175== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
