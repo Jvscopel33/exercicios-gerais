@@ -1,0 +1,3 @@
+main.c:3:18: warning: extra tokens at end of #include directive
+    3 | #include "data.h";
+      |                  ^
