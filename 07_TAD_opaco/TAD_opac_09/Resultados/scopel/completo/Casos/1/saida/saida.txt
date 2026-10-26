@@ -1,1 +1,5 @@
-valgrind: Resultados/scopel/completo/prog: No such file or directory
+A empresa 1 ja possui um funcionario com o id 25
+Empresa 1:
+- Funcionario 25: RS 3000.00
+- Funcionario 20: RS 500.00
+

@@ -36,7 +36,14 @@ tEmpresa *CriaEmpresa()
 void LeEmpresa(tEmpresa *empresa)
 {
   empresa->qtdFuncionariosAlocados = 0;
-  scanf(" %d ", &empresa->id);
+  scanf(" %d %d\n", &empresa->id, &empresa->qtdFuncEntrada);
+  empresa->funcionarios = (tFuncionario **)calloc(empresa->qtdFuncEntrada, sizeof(tFuncionario *));
+  for (int i = 0; i < empresa->qtdFuncEntrada; i++)
+  {
+    tFuncionario *f = CriaFuncionario();
+    LeFuncionario(f);
+    ContrataFuncionarioEmpresa(empresa, f);
+  }
 }
 
 /**
