@@ -1,33 +1,15 @@
-==175420== Memcheck, a memory error detector
-==175420== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==175420== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==175420== Command: Resultados/scopel/aluno/prog Resultados/scopel/aluno/Casos/3
-==175420== Parent PID: 175419
-==175420== 
-==175420== Invalid write of size 1
-==175420==    at 0x10930F: LeAluno (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420==    by 0x10955A: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420==  Address 0x4a76225 is 0 bytes after a block of size 5 alloc'd
-==175420==    at 0x484DB80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==175420==    by 0x1092DC: LeAluno (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420==    by 0x10955A: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420== 
-==175420== Invalid read of size 1
-==175420==    at 0x484F294: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==175420==    by 0x48E6CDC: puts (ioputs.c:35)
-==175420==    by 0x109437: ImprimeAluno (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420==    by 0x109650: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420==  Address 0x4a76225 is 0 bytes after a block of size 5 alloc'd
-==175420==    at 0x484DB80: realloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==175420==    by 0x1092DC: LeAluno (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420==    by 0x10955A: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_04/Resultados/scopel/aluno/prog)
-==175420== 
-==175420== 
-==175420== HEAP SUMMARY:
-==175420==     in use at exit: 0 bytes in 0 blocks
-==175420==   total heap usage: 76 allocs, 76 frees, 8,676 bytes allocated
-==175420== 
-==175420== All heap blocks were freed -- no leaks are possible
-==175420== 
-==175420== For lists of detected and suppressed errors, rerun with: -s
-==175420== ERROR SUMMARY: 14 errors from 2 contexts (suppressed: 0 from 0)
+==195610== Memcheck, a memory error detector
+==195610== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==195610== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==195610== Command: Resultados/scopel/aluno/prog Resultados/scopel/aluno/Casos/3
+==195610== Parent PID: 195609
+==195610== 
+==195610== 
+==195610== HEAP SUMMARY:
+==195610==     in use at exit: 0 bytes in 0 blocks
+==195610==   total heap usage: 86 allocs, 86 frees, 8,830 bytes allocated
+==195610== 
+==195610== All heap blocks were freed -- no leaks are possible
+==195610== 
+==195610== For lists of detected and suppressed errors, rerun with: -s
+==195610== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

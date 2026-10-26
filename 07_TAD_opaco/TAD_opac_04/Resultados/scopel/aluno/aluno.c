@@ -6,7 +6,7 @@
 struct Aluno
 {
     char *nome;
-    int matricula;
+    char matricula[10];
     int n1, n2, n3;
 };
 
@@ -19,7 +19,6 @@ tAluno *CriaAluno()
 {
     tAluno *a = (tAluno *)calloc(1, sizeof(tAluno));
     a->nome = NULL;
-    a->matricula = -1;
     a->n1 = a->n2 = a->n3 = -1;
     return a;
 }
@@ -55,8 +54,9 @@ void LeAluno(tAluno *aluno)
         aluno->nome[qtdlet] = let;
         qtdlet++;
     }
+    aluno->nome = (char *)realloc(aluno->nome, (qtdlet + 1) * sizeof(char));
     aluno->nome[qtdlet] = '\0';
-    scanf(" %d\n", &aluno->matricula);
+    scanf(" %s\n", aluno->matricula);
     scanf(" %d %d %d\n", &aluno->n1, &aluno->n2, &aluno->n3);
 }
 
@@ -70,11 +70,7 @@ void LeAluno(tAluno *aluno)
 int ComparaMatricula(tAluno *aluno1, tAluno *aluno2)
 {
 
-    if (aluno1->matricula == aluno2->matricula)
-    {
-        return 1;
-    }
-    return 0;
+    return strcmp(aluno1->matricula, aluno2->matricula);
 }
 
 /**
@@ -112,5 +108,8 @@ int VerificaAprovacao(tAluno *aluno)
  */
 void ImprimeAluno(tAluno *aluno)
 {
-    printf("%s\n", aluno->nome);
+    if (VerificaAprovacao(aluno))
+    {
+        printf("%s\n", aluno->nome);
+    }
 }

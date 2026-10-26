@@ -1,1 +1,4 @@
-valgrind: Resultados/scopel/main/prog: No such file or directory
+Clovis
+Jorge
+Ronaldo
+Maria
