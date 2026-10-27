@@ -1,6 +1,6 @@
-Arquivos Esperados Corretos: 2 de 5
-Pastas Compiladas Corretamente: 2 de 4 
-Pastas Linkadas Corretamente: 1 de 4
+Arquivos Esperados Corretos: 4 de 5
+Pastas Compiladas Corretamente: 3 de 4 
+Pastas Linkadas Corretamente: 2 de 4
 Teste main
   - Resultados corretos: 0 de 6
   - Valgrinds corretos: 0 de 6

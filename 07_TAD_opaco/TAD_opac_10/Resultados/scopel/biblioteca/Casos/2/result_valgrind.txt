@@ -1,0 +1,90 @@
+==375299== Memcheck, a memory error detector
+==375299== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==375299== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==375299== Command: Resultados/scopel/biblioteca/prog Resultados/scopel/biblioteca/Casos/2
+==375299== Parent PID: 375298
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F289: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x10969C: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F298: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x10969C: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F37F: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x1096C8: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F397: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x1096C8: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F289: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x1096EF: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F298: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x1096EF: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F37F: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x10971D: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F397: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x10971D: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10992D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F289: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x10969C: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109467: AdicionarLivroNaBiblioteca (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109940: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F37F: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x1096C8: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109467: AdicionarLivroNaBiblioteca (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109940: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F289: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x1096EF: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109467: AdicionarLivroNaBiblioteca (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109940: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== Conditional jump or move depends on uninitialised value(s)
+==375299==    at 0x484F37F: strcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x10971D: LerLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109467: AdicionarLivroNaBiblioteca (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x109940: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== 
+==375299== HEAP SUMMARY:
+==375299==     in use at exit: 175 bytes in 15 blocks
+==375299==   total heap usage: 39 allocs, 24 frees, 8,686 bytes allocated
+==375299== 
+==375299== 175 (120 direct, 55 indirect) bytes in 5 blocks are definitely lost in loss record 3 of 3
+==375299==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==375299==    by 0x10962A: CriaLivro (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299==    by 0x10991D: main (in /home/joao_scopel/Prog2/07_TAD_opaco/TAD_opac_10/Resultados/scopel/biblioteca/prog)
+==375299== 
+==375299== LEAK SUMMARY:
+==375299==    definitely lost: 120 bytes in 5 blocks
+==375299==    indirectly lost: 55 bytes in 10 blocks
+==375299==      possibly lost: 0 bytes in 0 blocks
+==375299==    still reachable: 0 bytes in 0 blocks
+==375299==         suppressed: 0 bytes in 0 blocks
+==375299== 
+==375299== Use --track-origins=yes to see where uninitialised values come from
+==375299== For lists of detected and suppressed errors, rerun with: -s
+==375299== ERROR SUMMARY: 73 errors from 13 contexts (suppressed: 0 from 0)

@@ -1,15 +1,15 @@
-==354259== Memcheck, a memory error detector
-==354259== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
-==354259== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
-==354259== Command: Resultados/scopel/livro/prog Resultados/scopel/livro/Casos/3
-==354259== Parent PID: 354258
-==354259== 
-==354259== 
-==354259== HEAP SUMMARY:
-==354259==     in use at exit: 0 bytes in 0 blocks
-==354259==   total heap usage: 29 allocs, 29 frees, 8,381 bytes allocated
-==354259== 
-==354259== All heap blocks were freed -- no leaks are possible
-==354259== 
-==354259== For lists of detected and suppressed errors, rerun with: -s
-==354259== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==378407== Memcheck, a memory error detector
+==378407== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==378407== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==378407== Command: Resultados/scopel/livro/prog Resultados/scopel/livro/Casos/3
+==378407== Parent PID: 378406
+==378407== 
+==378407== 
+==378407== HEAP SUMMARY:
+==378407==     in use at exit: 0 bytes in 0 blocks
+==378407==   total heap usage: 29 allocs, 29 frees, 8,381 bytes allocated
+==378407== 
+==378407== All heap blocks were freed -- no leaks are possible
+==378407== 
+==378407== For lists of detected and suppressed errors, rerun with: -s
+==378407== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
