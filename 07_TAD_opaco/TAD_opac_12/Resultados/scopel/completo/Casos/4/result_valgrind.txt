@@ -1,0 +1,15 @@
+==593325== Memcheck, a memory error detector
+==593325== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==593325== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==593325== Command: Resultados/scopel/completo/prog Resultados/scopel/completo/Casos/4
+==593325== Parent PID: 593324
+==593325== 
+==593325== 
+==593325== HEAP SUMMARY:
+==593325==     in use at exit: 0 bytes in 0 blocks
+==593325==   total heap usage: 103 allocs, 103 frees, 28,408 bytes allocated
+==593325== 
+==593325== All heap blocks were freed -- no leaks are possible
+==593325== 
+==593325== For lists of detected and suppressed errors, rerun with: -s
+==593325== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
