@@ -1,0 +1,3 @@
+proprietario.c:13:1: warning: no semicolon at end of struct or union
+   13 | };
+      | ^
