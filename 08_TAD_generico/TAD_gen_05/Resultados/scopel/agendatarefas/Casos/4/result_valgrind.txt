@@ -1,0 +1,45 @@
+==38105== Memcheck, a memory error detector
+==38105== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==38105== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==38105== Command: Resultados/scopel/agendatarefas/prog Resultados/scopel/agendatarefas/Casos/4
+==38105== Parent PID: 38104
+==38105== 
+==38105== Use of uninitialised value of size 8
+==38105==    at 0x10968F: ExecutaTarefaImprimir (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==    by 0x109348: ExecutarTarefasDaAgenda (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==    by 0x1095F7: main (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105== 
+==38105== Invalid read of size 8
+==38105==    at 0x10968F: ExecutaTarefaImprimir (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==    by 0x109348: ExecutarTarefasDaAgenda (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==    by 0x1095F7: main (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==38105== 
+==38105== 
+==38105== Process terminating with default action of signal 11 (SIGSEGV)
+==38105==  Access not within mapped region at address 0x0
+==38105==    at 0x10968F: ExecutaTarefaImprimir (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==    by 0x109348: ExecutarTarefasDaAgenda (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==    by 0x1095F7: main (in /home/jvscopel/exercicios-gerais/08_TAD_generico/TAD_gen_05/Resultados/scopel/agendatarefas/prog)
+==38105==  If you believe this happened as a result of a stack
+==38105==  overflow in your program's main thread (unlikely but
+==38105==  possible), you can try to increase the size of the
+==38105==  main thread stack using the --main-stacksize= flag.
+==38105==  The main thread stack size used in this run was 8388608.
+==38105== 
+==38105== HEAP SUMMARY:
+==38105==     in use at exit: 8,901 bytes in 32 blocks
+==38105==   total heap usage: 58 allocs, 26 frees, 17,325 bytes allocated
+==38105== 
+==38105== LEAK SUMMARY:
+==38105==    definitely lost: 0 bytes in 0 blocks
+==38105==    indirectly lost: 0 bytes in 0 blocks
+==38105==      possibly lost: 0 bytes in 0 blocks
+==38105==    still reachable: 8,901 bytes in 32 blocks
+==38105==         suppressed: 0 bytes in 0 blocks
+==38105== Reachable blocks (those to which a pointer was found) are not shown.
+==38105== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==38105== 
+==38105== Use --track-origins=yes to see where uninitialised values come from
+==38105== For lists of detected and suppressed errors, rerun with: -s
+==38105== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
