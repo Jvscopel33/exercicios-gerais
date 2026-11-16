@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "matrizgenerica.h"
-#include "numcomplexo.h"
+
 
 // Adaptado do código compartilhado pelo prof. Thiago
 
@@ -28,24 +28,40 @@ struct matrizgenerica
 
 tMatrizGenerica *CriaMatrizGenerica(int linhas, int colunas, int numByteElem)
 {
-    tMatrizGenerica *m = (tMatrizGenerica *)calloc(1, sizeof(tMatrizGenerica));
+    if (linhas <= 0 || colunas <= 0 || numByteElem <= 0)
+        return NULL;
+
+    tMatrizGenerica *m = calloc(1, sizeof *m);
+    if (!m)
+        return NULL;
+
     m->linhas = linhas;
     m->colunas = colunas;
     m->numByElem = numByteElem;
-
     m->data = calloc(linhas, sizeof *m->data);
+
+    if (!m->data)
+        goto falha;
 
     for (int i = 0; i < linhas; i++)
     {
         m->data[i] = calloc(colunas, sizeof *m->data[i]);
+        if (!m->data[i])
+            goto falha;
 
         for (int j = 0; j < colunas; j++)
         {
             m->data[i][j] = malloc(numByteElem);
+            if (!m->data[i][j])
+                goto falha;
         }
     }
 
     return m;
+
+falha:
+    DestroiMatrizGenerica(m);
+    return NULL;
 }
 
 /**
@@ -56,18 +72,20 @@ tMatrizGenerica *CriaMatrizGenerica(int linhas, int colunas, int numByteElem)
  */
 void DestroiMatrizGenerica(tMatrizGenerica *mat)
 {
-    for (int i = 0; i < mat->linhas; i++)
+    if (!mat)
+        return;
+
+    if (mat->data)
     {
-        for (int j = 0; j < mat->colunas; j++)
+        for (int i = 0; i < mat->linhas && mat->data[i]; i++)
         {
-            free(mat->data[i][j]);
+            for (int j = 0; j < mat->colunas; j++)
+                free(mat->data[i][j]);
+
+            free(mat->data[i]);
         }
+        free(mat->data);
     }
-    for (int i = 0; i < mat->linhas; i++)
-    {
-        free(mat->data[i]);
-    }
-    free(mat->data);
     free(mat);
 }
 
@@ -80,7 +98,7 @@ void DestroiMatrizGenerica(tMatrizGenerica *mat)
  */
 int ObtemNumeroLinhasMatrizGenerica(tMatrizGenerica *mat)
 {
-    return mat->linhas;
+    return mat ? mat->linhas : 0;
 }
 
 /**
@@ -92,7 +110,7 @@ int ObtemNumeroLinhasMatrizGenerica(tMatrizGenerica *mat)
  */
 int ObtemNumeroColunasMatrizGenerica(tMatrizGenerica *mat)
 {
-    return mat->colunas;
+    return mat ? mat->colunas : 0;
 }
 
 /**
@@ -106,6 +124,10 @@ int ObtemNumeroColunasMatrizGenerica(tMatrizGenerica *mat)
  */
 void *ObtemElementoMatrizGenerica(tMatrizGenerica *mat, int linha, int coluna)
 {
+    if (!mat || linha < 0 || linha >= mat->linhas ||
+        coluna < 0 || coluna >= mat->colunas)
+        return NULL;
+
     return mat->data[linha][coluna];
 }
 
@@ -115,13 +137,14 @@ void *ObtemElementoMatrizGenerica(tMatrizGenerica *mat, int linha, int coluna)
  * @param mat - Ponteiro para a matriz que queremos atribuir o elemento na linha e coluna desejada
  * @param linha - Linha que o elemento ficará
  * @param coluna - Coluna que o elemento ficará
- * @param *elem - Ponteiro para o elemento que será colocado na matriz (será feita uma cópia)
+ * @param elem - Ponteiro para o elemento que será colocado na matriz (será feita uma cópia)
  *
- * @return Ponteiro para o elemento da matriz que está na linha e coluna passadas como parâmetro
  */
 void AtribuiElementoMatrizGenerica(tMatrizGenerica *mat, int linha, int coluna, void *elem)
 {
-    memcpy(mat->data[linha][coluna], elem, sizeof(mat->data[linha][coluna]));
+    void *destino = ObtemElementoMatrizGenerica(mat, linha, coluna);
+    if (destino && elem)
+        memmove(destino, elem, mat->numByElem);
 }
 
 /**
@@ -134,17 +157,20 @@ void AtribuiElementoMatrizGenerica(tMatrizGenerica *mat, int linha, int coluna, 
  * @param imprime_elemento - Ponteiro para a função (callback) que tem a capacidade de imprimir os dados de um elemento desta matriz
  */
 
-void ImprimirMatrizGenerica(tMatrizGenerica *mat, void(imprime_elemento(void *)))
+void ImprimirMatrizGenerica(tMatrizGenerica *mat, void (*imprime_elemento)(void *))
 {
+    if (!mat || !imprime_elemento)
+        return;
+
     for (int i = 0; i < mat->linhas; i++)
     {
         for (int j = 0; j < mat->colunas; j++)
         {
             imprime_elemento(mat->data[i][j]);
+            putchar(' ');
         }
         printf("\n");
     }
-    printf("\n");
 }
 
 /**
@@ -156,13 +182,18 @@ void ImprimirMatrizGenerica(tMatrizGenerica *mat, void(imprime_elemento(void *))
  */
 tMatrizGenerica *MatrizTransposta(tMatrizGenerica *mat)
 {
+    if (!mat)
+        return NULL;
+
     tMatrizGenerica *tra = CriaMatrizGenerica(mat->colunas, mat->linhas, mat->numByElem);
+    if (!tra)
+        return NULL;
 
     for (int i = 0; i < mat->linhas; i++)
     {
         for (int j = 0; j < mat->colunas; j++)
         {
-            tra->data[j][i] = mat->data[i][j];
+            AtribuiElementoMatrizGenerica(tra, j, i, mat->data[i][j]);
         }
     }
     return tra;
@@ -170,6 +201,9 @@ tMatrizGenerica *MatrizTransposta(tMatrizGenerica *mat)
 
 /**
  * @brief Calcula e retorna a multiplicação entre duas matrizes
+ * Os callbacks retornam um resultado alocado dinamicamente e transferem
+ * sua posse à matriz. Cada resultado deve conter pelo menos o número de
+ * bytes de um elemento da matriz de saída.
  *
  * @param mat1 - A primeira matriz da multiplicação
  * @param mat2 - A segunda matriz da multiplicação
@@ -181,27 +215,53 @@ tMatrizGenerica *MatrizTransposta(tMatrizGenerica *mat)
  */
 tMatrizGenerica *MultiplicaMatrizes(tMatrizGenerica *mat1, tMatrizGenerica *mat2, int numByteTarget, void *(*multi_elem)(void *, void *), void *(*soma_elem)(void *, void *))
 {
-    if (mat1->linhas != mat2->colunas)
+    if (!mat1 || !mat2 || !multi_elem || !soma_elem ||
+        mat1->colunas != mat2->linhas)
     {
         return NULL;
     }
     tMatrizGenerica *m = CriaMatrizGenerica(mat1->linhas, mat2->colunas, numByteTarget);
+    if (!m)
+        return NULL;
 
     for (int i = 0; i < mat1->linhas; i++)
     {
         for (int j = 0; j < mat2->colunas; j++)
         {
-            for (int k = 0; k < mat1->colunas; k++)
+            void *produto = multi_elem(mat1->data[i][0], mat2->data[0][j]);
+            if (!produto)
+                goto falha;
+            AtribuiElementoMatrizGenerica(m, i, j, produto);
+            free(produto);
+
+            for (int k = 1; k < mat1->colunas; k++)
             {
-                soma_elem(m->data[i][j], multi_elem(mat1->data[i][k], mat2->data[k][j]));
+                produto = multi_elem(mat1->data[i][k], mat2->data[k][j]);
+                if (!produto)
+                    goto falha;
+
+                void *soma = soma_elem(m->data[i][j], produto);
+
+                free(produto);
+                if (!soma)
+                    goto falha;
+                AtribuiElementoMatrizGenerica(m, i, j, soma);
+                free(soma);
             }
         }
     }
     return m;
+
+falha:
+    DestroiMatrizGenerica(m);
+    return NULL;
 }
 
 /**
  * @brief Converte o tipo da matriz
+ * Os callbacks retornam um resultado alocado dinamicamente e transferem
+ * sua posse à matriz. Cada resultado deve conter pelo menos o número de
+ * bytes de um elemento da matriz de saída.
  *
  * @param mat - A matriz que queremos converter para o novo tipo
  * @param novoNumByteElem - Número de bytes do novo tipo da matriz
@@ -211,13 +271,25 @@ tMatrizGenerica *MultiplicaMatrizes(tMatrizGenerica *mat1, tMatrizGenerica *mat2
  */
 tMatrizGenerica *ConverteTipoMatriz(tMatrizGenerica *mat2, int novoNumByteElem, void *(*converte_elem)(void *))
 {
+    if (!mat2 || !converte_elem)
+        return NULL;
+
     tMatrizGenerica *matrix = CriaMatrizGenerica(mat2->linhas, mat2->colunas, novoNumByteElem);
+    if (!matrix)
+        return NULL;
 
     for (int i = 0; i < mat2->linhas; i++)
     {
         for (int j = 0; j < mat2->colunas; j++)
         {
-            AtribuiElementoMatrizGenerica(matrix, i, j, mat2->data[i][j]);
+            void *convertido = converte_elem(mat2->data[i][j]);
+            if (!convertido)
+            {
+                DestroiMatrizGenerica(matrix);
+                return NULL;
+            }
+            AtribuiElementoMatrizGenerica(matrix, i, j, convertido);
+            free(convertido);
         }
     }
 
