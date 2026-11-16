@@ -1,0 +1,4 @@
+matrizgenerica.c: In function ‘AtribuiElementoMatrizGenerica’:
+matrizgenerica.c:124:50: warning: argument to ‘sizeof’ in ‘memcpy’ call is the same expression as the destination; did you mean to dereference it? [-Wsizeof-pointer-memaccess]
+  124 |     memcpy(mat->data[linha][coluna], elem, sizeof(mat->data[linha][coluna]));
+      |                                                  ^
