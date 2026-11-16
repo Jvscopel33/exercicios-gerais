@@ -1,0 +1,6 @@
+==501954== Memcheck, a memory error detector
+==501954== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==501954== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==501954== Command: Resultados/scopel/pacote/prog Resultados/scopel/pacote/Casos/4
+==501954== Parent PID: 501953
+==501954== 

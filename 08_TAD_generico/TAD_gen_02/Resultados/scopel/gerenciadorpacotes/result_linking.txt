@@ -1,0 +1,7 @@
+/usr/bin/ld: Resultados/scopel/gerenciadorpacotes/main.o: na função "main":
+main.c:(.text+0x21): referência não definida para "CriaGerenciador"
+/usr/bin/ld: main.c:(.text+0x14f): referência não definida para "AdicionaPacoteNoGerenciador"
+/usr/bin/ld: main.c:(.text+0x193): referência não definida para "ImprimirPacoteNoIndice"
+/usr/bin/ld: main.c:(.text+0x1a9): referência não definida para "ImprimirTodosPacotes"
+/usr/bin/ld: main.c:(.text+0x1c1): referência não definida para "DestroiGerenciador"
+collect2: error: ld returned 1 exit status
