@@ -1,0 +1,4 @@
+base_alunos.c: In function ‘CriarBaseAlunos’:
+base_alunos.c:25:1: warning: control reaches end of non-void function [-Wreturn-type]
+   25 | }
+      | ^
